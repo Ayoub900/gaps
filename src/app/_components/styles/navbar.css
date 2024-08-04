@@ -1,0 +1,14 @@
+.submenu {
+    animation: animate-in 200ms ease-in-out forwards;
+  }
+  
+  @keyframes animate-in {
+    from {
+      transform: translateX(-10px);
+      opacity: 0.2;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }

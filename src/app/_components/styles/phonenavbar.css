@@ -1,0 +1,12 @@
+.phonesubmenu {
+    animation: animate-down 300ms ease-in-out forwards;
+  }
+  
+  @keyframes animate-down {
+    from {
+      height: 0;
+    }
+    to {
+      height: 100%;
+    }
+  }
