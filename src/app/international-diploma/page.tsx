@@ -32,7 +32,6 @@ export default function page({ searchParams: { s } }: PageProps) {
         }
 
         try {
-            console.log("start saving to db")
             await db.internationalDiploma.create({
                 data: {
                     name,
@@ -44,7 +43,6 @@ export default function page({ searchParams: { s } }: PageProps) {
                 }
             })
         } catch (error) {
-            console.log('error :', error)
             throw new Error("couldn't save the request!!")
         }
 

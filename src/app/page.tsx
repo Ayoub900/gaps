@@ -19,21 +19,21 @@ export default async function Home() {
       </div>
 
       <div id="accreditation" className="gap-4 mx-auto my-12 flex flex-col justify-center md:flex-row px-4 md:px-24">
-        <Image className="bg-red-800" src="/logo_2.png" width={500} height={500} alt="logo" />
+        <Image className="bg-red-800" src="/logo.png" width={500} height={500} alt="logo" />
         <div className="space-y-4 text-center flex flex-col">
           <div className="flex flex-col w-full border border-red-600">
             <h1 className="p-4 text-center justify-center bg-red-600 hover:bg-red-800 text-white/80">Accreditation</h1>
             <div className="p-4 flex flex-col space-y-4">
-              <Link className="flex text-center justify-center p-4 w-full bg-black/90 hover:bg-red-800 " href="#"><Image src="/link.svg" width={20} height={20} alt="logo" /></Link>
+              <Link className="flex text-center justify-center p-4 w-full bg-black/90 hover:bg-red-800 " href="/institutions-acc"><Image src="/link.svg" width={20} height={20} alt="logo" /></Link>
               <h1>Accreditation Of Institutions</h1>
-              <Link className="flex text-center justify-center p-4 w-full bg-black/90 hover:bg-red-800 " href="#"><Image src="/link.svg" width={20} height={20} alt="logo" /></Link>
+              <Link className="flex text-center justify-center p-4 w-full bg-black/90 hover:bg-red-800 " href="/instructors-acc"><Image src="/link.svg" width={20} height={20} alt="logo" /></Link>
               <h1>Accreditation Of Instructors</h1>
             </div>
           </div>
           <div className="flex flex-col w-full border border-red-600">
             <h1 className="p-4 text-center justify-center bg-red-600 hover:bg-red-800 text-white/80">Diploma</h1>
             <div className="p-4 flex flex-col space-y-4">
-              <Link className="flex text-center justify-center p-4 w-full bg-black/90 hover:bg-red-800 " href="#"><Image src="/link.svg" width={20} height={20} alt="logo" /></Link>
+              <Link className="flex text-center justify-center p-4 w-full bg-black/90 hover:bg-red-800 " href="/international-diploma"><Image src="/link.svg" width={20} height={20} alt="logo" /></Link>
               <h1>International Diploma</h1>
             </div>
           </div>
