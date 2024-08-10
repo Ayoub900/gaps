@@ -17,6 +17,7 @@ export default async function Navbar() {
                 </Link>
                 <div className=' flex-row hidden md:flex items-center gap-4 text-black font-semibold'>
                     <Link className='hover:text-red-600 transition-all duration-300 p-4' href={'/'}>Home</Link>
+                    <Link className='hover:text-red-600 transition-all duration-300 p-4' href={'/about'}>About Us</Link>
                     <Link className='hover:text-red-600 transition-all duration-300 p-4' href={'/institutions-acc'}>Institutions Accreditation</Link>
                     <Link className='hover:text-red-600 transition-all duration-300 p-4' href={'/instructors-acc'}>Instructors Accreditation</Link>
                     <Link className='hover:text-red-600 transition-all duration-300 p-4' href={'/international-diploma'}>International Diploma</Link>

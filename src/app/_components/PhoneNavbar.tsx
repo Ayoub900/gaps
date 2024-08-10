@@ -19,6 +19,7 @@ export default function PhoneNavbar() {
                     </label>
                     <div className='flex flex-col gap-4 text-black font-semibold'>
                         <a className='hover:text-red-600 transition-all duration-300 py-2' href={'/'}>Home</a>
+                        <a className='hover:text-red-600 transition-all duration-300 py-2' href={'/about'}>About Us</a>
                         <a className='hover:text-red-600 transition-all duration-300 py-2' href={'/institutions-acc'}>Institutions Accreditation</a>
                         <a className='hover:text-red-600 transition-all duration-300 py-2' href={'/instructors-acc'}>Instructors Accreditation</a>
                         <a className='hover:text-red-600 transition-all duration-300 py-2' href={'/international-diploma'}>International Diploma</a>

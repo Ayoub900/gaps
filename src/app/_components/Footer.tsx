@@ -16,6 +16,7 @@ export default function Footer() {
                     <h1 className="text-2xl font-semibold text-white mb-2">Usefull links</h1>
                     <div className='px-4 flex flex-col'>
                         <Link className='text-white/70 underline p-2' href={'/'}>Home</Link>
+                        <Link className='text-white/70 underline p-2' href={'/about'}>About Us</Link>
                         <Link className='text-white/70 underline p-2' href={'/institutions-acc'}>Accreditation Of Institutions</Link>
                         <Link className='text-white/70 underline p-2' href={'/instructors-acc'}>Accreditation Of Instructors</Link>
                         <Link className='text-white/70 underline p-2' href={'/international-diploma'}>International Diploma</Link>
