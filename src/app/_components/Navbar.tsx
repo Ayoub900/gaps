@@ -11,7 +11,7 @@ export default async function Navbar() {
             <div className='bg-white py-2 px-4 max-w-7xl hidden md:flex flex-row justify-between'>
                 <Link className='flex items-center ' href={'/'}>
                     <Image className='max-h-[65px] max-w-[65px] lg:max-h-[80px] lg:max-w-[80px]' src={'/logo_4.png'} alt='logo' width={120} height={120} />
-                    <h1 className='leading-[14px] text-3xl font-bold text-red-bg-red-950'>
+                    <h1 className='leading-[24px] text-3xl font-bold text-red-bg-red-950'>
                         ASB Academy
                     </h1>
                 </Link>

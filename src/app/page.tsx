@@ -25,7 +25,7 @@ export default async function Home() {
 
       <div id="accreditation" className="gap-4 mx-auto my-12 flex flex-col justify-center md:flex-row px-4 md:px-24">
         <div className="space-y-4 flex flex-col justify-center">
-          <h1 className="text-5xl border-b-2 border-red-600 flex"><Image className="" src="/warning.svg" width={35} height={35} alt="warning" /> Trademark warnings complain</h1>
+          <h1 className="text-5xl border-b-2 border-red-600 flex w-full"> Trademark warnings complain<Image className="object-contain h-full" src="/warning.svg" width={50} height={50} alt="warning" /></h1>
           <span className="bg-yellow-400 py-1 text-xl">ASBA doesn&apos;t have any websites except www.asba.org.uk, And we do not have any social media pages, </span>
           <p className="my-4 text-xl">
             Advanced Skills and Business Academy (ASBA) is a registered trademark globally and locally,
@@ -43,7 +43,7 @@ export default async function Home() {
             </tr>
           </table>
         </div>
-        <Image className="bg-red-800 w-full" src="/warning.png" width={300} height={300} alt="logo" />
+        <Image className="bg-red-800 w-full object-contain" src="/warning.png" width={300} height={300} alt="warning" />
       </div>
       <div id="accreditation" className="gap-4 mx-auto my-12 flex flex-col justify-center md:flex-row px-4 md:px-24">
         <Image className="bg-red-800" src="/logo.png" width={500} height={500} alt="logo" />
