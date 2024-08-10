@@ -19,6 +19,28 @@ export default async function Home() {
       </div>
 
       <div id="accreditation" className="gap-4 mx-auto my-12 flex flex-col justify-center md:flex-row px-4 md:px-24">
+        <div className="space-y-4 flex flex-col justify-center">
+          <h1 className="text-5xl border-b-2 border-red-600 flex"><Image className="" src="/warning.svg" width={35} height={35} alt="warning" /> Trademark warnings complain</h1>
+          <span className="bg-yellow-400 py-1 text-xl">doesn&apos;t have any websites except www.asba.org.uk, And we do not have any social media pages, </span>
+          <p className="my-4 text-xl">
+            Advanced Skills and Business Academy (ASBA) is a registered trademark globally and locally,
+            you can find our governmental trademark certificate in about us section.
+            You can verify our trademark accreditation holders through our official website or via Trademark@asba.org.uk</p>
+
+          <table className="border-gray-300 text-xl">
+            <tr>
+              <td className="border border-gray-300 p-4">
+                Registration number
+              </td>
+              <td className="border border-gray-300 p-4">
+                UK00015865484<br />
+              </td>
+            </tr>
+          </table>
+        </div>
+        <Image className="bg-red-800 w-full" src="/logo.png" width={300} height={300} alt="logo" />
+      </div>
+      <div id="accreditation" className="gap-4 mx-auto my-12 flex flex-col justify-center md:flex-row px-4 md:px-24">
         <Image className="bg-red-800" src="/logo.png" width={500} height={500} alt="logo" />
         <div className="space-y-4 text-center flex flex-col">
           <div className="flex flex-col w-full border border-red-600">
