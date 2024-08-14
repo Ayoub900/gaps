@@ -20,6 +20,7 @@ export default function Footer() {
                         <Link className='text-white/70 underline p-2' href={'/institutions-acc'}>Accreditation Of Institutions</Link>
                         <Link className='text-white/70 underline p-2' href={'/instructors-acc'}>Accreditation Of Instructors</Link>
                         <Link className='text-white/70 underline p-2' href={'/international-diploma'}>International Diploma</Link>
+                        <Link className='text-white/70 underline p-2' href={'https://www.ga-skills.org.uk/verification'}>Verification</Link>
                         {/* <Link className='text-white/70 underline p-2' href={'/verification'}>Verifaction</Link> */}
                     </div>
                 </div>
