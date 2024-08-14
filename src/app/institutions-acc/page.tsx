@@ -59,13 +59,13 @@ export default function page({ searchParams: { s } }: PageProps) {
     return (
         <div className='flex flex-col justify-center p-4 md:p-24'>
             <form action={handleSubmit} className='p-4 mx-auto bg-white max-w-3xl'>
-                <p>
+                <p className='mb-8'>
                     <h1 className='text-3xl font-semibold'>Accreditation</h1>
                     <br />
                     If you are an organization or training or educational center, here is your right place to obtain excellence.
                     <br />
                     <br />
-                    Under the supervision of <strong className='font-semibold'>ASBA®</strong> <Link href={"/"}></Link>www.asba.org.uk
+                    Under the supervision of <strong className='font-semibold'>GA-SKILLS®</strong> <Link className='underline text-blue-600' href={"https://www.ga-skills.org.uk"}>www.ga-skills.org.uk</Link>
                     <br />
                     <br />
                     You can obtain the name of :
