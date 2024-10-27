@@ -86,3 +86,16 @@ model application {
 
   @@map("applications")
 }
+
+model lpForm {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  lp          String
+  name        String
+  hasExp      String
+  hasDiplomas String
+  phone       String
+  field       String
+  createdAt   DateTime @default(now())
+
+  @@map("lpForms")
+}
