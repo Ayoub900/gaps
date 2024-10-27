@@ -1,8 +1,15 @@
+import { db } from "@/lib/db/prisma";
 import Image from "next/image";
+import PostCard from "./_components/PostCard";
 import Link from "next/link";
 
 export default async function Home() {
-
+  const posts = await db.post.findMany({
+    orderBy: { createdAt: 'desc' },
+    where: {
+      publish: true
+    }
+  })
   return (
     <>
       <div className="flex min-h-screen flex-col items-center justify-center bg-red-800 px-4 md:px-24 relative">
@@ -67,6 +74,17 @@ export default async function Home() {
         </div>
       </div>
 
+      <div className="flex flex-col px-4 md:px-24 py-10">
+        <h1 className="text-4xl font-semibold text-black mt-24 mb-4 mx-auto">Our Services</h1>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 gap-y-20 mb-8">
+          {posts && posts.length > 0 &&
+            posts.map((a) => (
+              <PostCard key={a.id} post={a} />
+            ))
+          }
+        </div>
+      </div>
+
       <div className="flex min-h-screen flex-col items-center px-4 md:px-24 relative space-y-4">
         <h1 className="text-3xl mb-6">Our Partners</h1>
         <div className="flex flex-wrap justify-center">
@@ -75,6 +93,7 @@ export default async function Home() {
           <Image className="object-contain mb-6" src="/p5.png" width={300} height={300} alt="p" />
           <Image className="object-contain" src="/p6.png" width={250} height={250} alt="p" />
           <Image className="object-contain" src="/p7.png" width={200} height={200} alt="p" />
+          <Image className="object-contain" src="/p8.png" width={200} height={200} alt="p" />
         </div>
       </div>
     </>

@@ -15,23 +15,26 @@ export default async function Navbar() {
                         ASB Academy
                     </h1>
                 </Link>
-                <div className=' flex-row hidden md:flex items-center gap-4 text-black font-semibold'>
+                <div className=' flex-row hidden md:flex items-center gap-1 text-black font-semibold'>
                     <Link className='hover:text-red-600 transition-all duration-300 p-4' href={'/'}>Home</Link>
-                    <Link className='hover:text-red-600 transition-all duration-300 p-4' href={'/about'}>About Us</Link>
+                    <Link className='hover:text-red-600 transition-all duration-300 p-4' href={'/posts/670f8b0e1f5bc8aa0d07cbf8'}>Accreditation</Link>
+                    <Link className='hover:text-red-600 transition-all duration-300 p-4' href={'/posts/670f8d50c4487330a2942822'}>Certification</Link>
+                    <Link className='hover:text-red-600 transition-all duration-300 p-4' href={'/posts/670f8e1bc4487330a2942826'}>VAE</Link>
                     <span className='group relative transition-all duration-300 h-full flex flex-col justify-center'>
                         <span className='gap-2 flex flex-row hover:text-red-600 cursor-pointer'>
-                            Accreditation
+                            Accreditation Membership
                             <Image className='group-hover:rotate-180 transition-all duration-300 ease-in-out' src={'/arrow_black.svg'} width={20} height={20} alt='arrow' />
                         </span>
-                        <div className=' hidden submenu z-[999] bg-white shadow-lg -translate-x-2 flex-row group-hover:flex group-hover:translate-x-0 transition-all duration-300 ease-in-out delay-100 absolute top-[80px] -left-[200px]'>
+                        <div className=' hidden submenu z-[999] bg-red-600 shadow-lg -translate-x-2 flex-row group-hover:flex group-hover:translate-x-0 transition-all duration-300 ease-in-out delay-100 absolute top-[50px] -left-[200px]'>
                             <div className='p-4 mt-2 flex flex-col w-[300px]'>
-                                <Link className=' text-black/90 mb-2 p-2' href={'/institutions-acc'}>Institutions Accreditation</Link>
-                                <Link className=' text-black/90 mb-2 p-2' href={'/instructors-acc'}>Instructors Accreditation</Link>
+                                <Link className=' text-white/90 mb-2 p-2' href={'https://asba.org.uk/institutions-acc'}>Institutions Accreditation</Link>
+                                <Link className=' text-white/90 mb-2 p-2' href={'https://asba.org.uk/instructors-acc'}>Instructors Accreditation</Link>
+                                <Link className=' text-white/90 mb-2 p-2' href={'https://asba.org.uk/international-diploma'}>International Diploma</Link>
                             </div>
                         </div>
                     </span>
-                    <Link className='hover:text-red-600 transition-all duration-300 p-4' href={'/international-diploma'}>International Diploma</Link>
-                    <Link className='hover:text-red-600 transition-all duration-300 p-4' href={'https://www.ga-skills.org.uk/verification'}>Verification</Link>
+                    <Link className='hover:text-red-600 transition-all duration-300 p-4' href={'/verification'}>Verification</Link>
+                    <Link className='hover:text-red-600 transition-all duration-300 p-4' href={'/about'}>About Us</Link>
                     {/* <Link className='hover:text-red-600 transition-all duration-300 p-4' href={'/about'}>Verifaction</Link> */}
                 </div >
             </div >

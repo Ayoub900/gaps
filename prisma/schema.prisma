@@ -51,3 +51,38 @@ model InstitutionsAcc {
 
   @@map("InstitutionsAccs")
 }
+
+model id {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  code      String?
+  diploma   String?
+  type      String?
+  diplomas  String[]
+  createdAt DateTime @default(now())
+  imageUrl  String
+
+  @@map("ids")
+}
+
+model post {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  title     String
+  body      String
+  publish   Boolean?
+  createdAt DateTime @default(now())
+  imageUrl  String
+
+  @@map("posts")
+}
+
+model application {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  name      String
+  title     String
+  email     String
+  phone     String
+  country   String
+  createdAt DateTime @default(now())
+
+  @@map("applications")
+}

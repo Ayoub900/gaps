@@ -23,7 +23,7 @@ export default function PhoneNavbar() {
                         <a className='hover:text-red-600 transition-all duration-300 py-2' href={'/institutions-acc'}>Institutions Accreditation</a>
                         <a className='hover:text-red-600 transition-all duration-300 py-2' href={'/instructors-acc'}>Instructors Accreditation</a>
                         <a className='hover:text-red-600 transition-all duration-300 py-2' href={'/international-diploma'}>International Diploma</a>
-                        <a className='hover:text-red-600 transition-all duration-300 py-2' href={'https://www.ga-skills.org.uk/verification'}>Verification</a>
+                        <a className='hover:text-red-600 transition-all duration-300 py-2' href={'/verification'}>Verification</a>
                     </div>
                 </div>
             }
