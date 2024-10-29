@@ -54,7 +54,9 @@ model InstitutionsAcc {
 
 model id {
   id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  name      String?
   code      String?
+  cin       String?
   diploma   String?
   type      String?
   diplomas  String[]
