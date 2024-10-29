@@ -69,7 +69,7 @@ export default async function PersonCard({ q }: CardProps) {
             {accreditation.diploma && accreditation.type === "VAE" &&
                 <>
                     <h1 className='text-5xl text-green-600 font-medium text-center'>Verified</h1>
-                    <h1 className='text-xl font-semibold'>Mr/Ms {accreditation.name}, CIN: {accreditation.cin}</h1>
+                    <h1 className='text-xl p-4 font-semibold'>Mr/Ms {accreditation.name}, CIN: {accreditation.cin}</h1>
                     <p className='p-4 font-semibold'>
                         Based on the evaluation committee&apos;s review of all relevant documents pertaining to the student&apos;s experience, he has been awarded a &quot;{accreditation.diploma}&quot;
                     </p>
