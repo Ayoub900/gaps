@@ -50,7 +50,7 @@ export default async function PersonCard({ q }: CardProps) {
             {accreditation.type !== "VAE" &&
                 <Image placeholder="blur" blurDataURL="data:..." className='mx-auto object-contain' width={700} height={500} alt={"id"} src={accreditation.imageUrl} />
             }
-            {accreditation.diploma && accreditation.type !== "I" &&
+            {accreditation.diploma && accreditation.type !== "I" && accreditation.type !== "VAE" &&
                 <p className='p-4 font-semibold'>
                     has completed the necessary training and assessment to demonstrate competence and understanding within this field. The International Education ASB-Academy awards this certificate in recognition of the achievement <span className='text-red-500'>{accreditation.diploma}</span>
                     with all the rights, privileges, and honors thereto
@@ -68,8 +68,8 @@ export default async function PersonCard({ q }: CardProps) {
             }
             {accreditation.diploma && accreditation.type === "VAE" &&
                 <>
-                    <h1 className='text-3xl font-semibold'>Verified</h1>
-                    <h1>Mr/Ms {accreditation.name}, CIN: {accreditation.cin}</h1>
+                    <h1 className='text-5xl text-green-600 font-medium text-center'>Verified</h1>
+                    <h1 className='text-xl font-semibold'>Mr/Ms {accreditation.name}, CIN: {accreditation.cin}</h1>
                     <p className='p-4 font-semibold'>
                         Based on the evaluation committee&apos;s review of all relevant documents pertaining to the student&apos;s experience, he has been awarded a &quot;{accreditation.diploma}&quot;
                     </p>
