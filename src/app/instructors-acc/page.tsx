@@ -60,9 +60,6 @@ export default function page({ searchParams: { s } }: PageProps) {
                     If you are an organization or training or educational center, here is your right place to obtain excellence.
                     <br />
                     <br />
-                    Under the supervision of <strong className='font-semibold'>GA-SKILLS®</strong> <Link className='underline text-blue-600' href={"https://www.ga-skills.org.uk"}>www.ga-skills.org.uk</Link>
-                    <br />
-                    <br />
                     You can obtain the name of :
                     <br />
                     <br />

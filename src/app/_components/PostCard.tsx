@@ -15,7 +15,7 @@ export default function postCard({ post }: postCardProps) {
                 <div>
                     <div className='w-full relative'  >
                         <Image className='object-cover' src={post.imageUrl} alt={post.title} width={500} height={300} />
-                        <span className='absolute top-1 right-2 bg-white p-2 my-2 text-secondery'>{format(post.createdAt, 'dd/MM/yyyy')}</span>
+                        {/* <span className='absolute top-1 right-2 bg-white p-2 my-2 text-secondery'>{format(post.createdAt, 'dd/MM/yyyy')}</span> */}
                     </div>
                     <div className='p-4 flex flex-col gap-4'>
                         <div className='relative '>
