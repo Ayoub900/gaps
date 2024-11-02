@@ -24,7 +24,7 @@ export default async function PersonCard({ q }: CardProps) {
 
     let accreditation = null
 
-    if (q.toString().includes(".")) {
+    if (q.toString().includes(".") || q.toString().includes("/")) {
         accreditation = await db.id.findFirst({
             where: {
                 code: q
