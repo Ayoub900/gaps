@@ -9,7 +9,7 @@ interface CardProps {
 export default async function PersonCard({ q }: CardProps) {
     function isValidObjectId(id: string): boolean {
         const objectIdRegex = /^[0-9a-fA-F]{24}$/;
-        return objectIdRegex.test(id) || id.toString().includes(".");
+        return objectIdRegex.test(id) || id.toString().includes(".") || id.toString().includes("/");
     }
 
     const isValid = isValidObjectId(q);
