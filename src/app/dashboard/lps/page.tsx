@@ -10,7 +10,8 @@ export default async function LPSPage() {
     const user = session?.user
 
     if (!user) {
-        redirect("/api/auth/signin")
+        const callbackUrl = "/dashboard/lps"
+        redirect("/login?callbackUrl=" + encodeURIComponent(callbackUrl))
     }
 
     if (user.role !== "ADMIN" && user.role !== "MANAGER") notFound()

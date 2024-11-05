@@ -9,7 +9,8 @@ export default async function page() {
     const user = session?.user
 
     if (!user) {
-        redirect("/api/auth/signin")
+        const callbackUrl = "/dashboard"
+        redirect("/login?callbackUrl=" + encodeURIComponent(callbackUrl))
     }
 
     if (user.role !== "ADMIN") notFound()
