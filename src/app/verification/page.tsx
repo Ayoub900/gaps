@@ -32,7 +32,7 @@ export default function page({ searchParams: { q } }: PageProps) {
 
     }
     return (
-        <div className='flex flex-col justify-center bg-primary p-4 md:p-24'>
+        <div className='flex flex-col justify-center bg-gray-200 p-4 md:p-24'>
             <form action={handleSubmit} className='p-4 mx-auto bg-white shadow-lg mb-4 min-w-[300px] w-full max-w-[560px]'>
                 <h1 className='text-3xl font-semibold text-secondery mb-3'>Type your Id to search:</h1>
                 <div className='flex flex-col md:flex-row gap-2 w-full'>

@@ -97,6 +97,7 @@ model lpForm {
   hasDiplomas String
   phone       String
   field       String
+  status      Status   @default(waiting)
   createdAt   DateTime @default(now())
 
   @@map("lpForms")
@@ -154,5 +155,12 @@ model User {
 
 enum UserRole {
   USER
+  MANAGER
   ADMIN
+}
+
+enum Status {
+  waiting
+  processing
+  processed
 }

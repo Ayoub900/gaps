@@ -3,6 +3,8 @@
 import { revalidatePath } from 'next/cache'
 import { db } from './db/prisma'
 
+
+// ids
 export async function getIds() {
     return db.id.findMany({
         orderBy: {
@@ -57,4 +59,18 @@ export async function updateId(id: string, formData: FormData) {
 export async function deleteId(id: string) {
     await db.id.delete({ where: { id } })
     revalidatePath('/dashboard')
+}
+
+// lps
+export async function getLPForms() {
+    return db.lpForm.findMany({
+        orderBy: { createdAt: 'desc' }
+    })
+}
+
+export async function updateLPFormStatus(id: string, status: 'waiting' | 'processing' | 'processed') {
+    await db.lpForm.update({
+        where: { id },
+        data: { status }
+    })
 }
