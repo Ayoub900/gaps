@@ -29,7 +29,7 @@ export default function page({
 
             <Form lp='lp_1' />
 
-            <Image className='object-contain z-0 p-4' src={'/lp_diplome.png'} width={500} height={300} alt='diplome' />
+            <Image className='object-contain z-0 p-4' src={'/asba_diploma.png'} width={500} height={300} alt='diplome' />
         </div>
     )
 }
