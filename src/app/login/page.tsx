@@ -11,14 +11,10 @@ import LoginForm from './LoginForm'
 import { getServerSession } from 'next-auth'
 import { authOptions } from '@/app/api/auth/[...nextauth]/auth'
 import { redirect } from 'next/navigation'
-import Link from 'next/link'
 import { revalidatePath } from 'next/cache'
 
-interface Props {
-    callbackUrl: string,
-}
 
-export default async function Login({ callbackUrl }: Props) {
+export default async function page() {
     const session = await getServerSession(authOptions)
     if (session) {
         revalidatePath("/")
