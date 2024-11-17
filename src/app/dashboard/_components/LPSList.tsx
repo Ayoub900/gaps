@@ -1,9 +1,14 @@
 import { getLPForms } from '@/lib/actions'
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table'
 import LPSStatusCell from './LPSStatusCell'
+import Link from 'next/link'
 
-export default async function LPSList() {
+export default async function Component() {
     const forms = await getLPForms()
+
+    const formatPhoneForWhatsApp = (phone: string) => {
+        return phone.replace(/[\s-]/g, '')
+    }
 
     return (
         <Table>
@@ -26,7 +31,16 @@ export default async function LPSList() {
                         <TableCell>{form.name}</TableCell>
                         <TableCell>{form.hasExp}</TableCell>
                         <TableCell>{form.hasDiplomas}</TableCell>
-                        <TableCell>{form.phone}</TableCell>
+                        <TableCell>
+                            <Link
+                                href={`https://wa.me/${formatPhoneForWhatsApp(form.phone)}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-blue-600 hover:underline"
+                            >
+                                {form.phone}
+                            </Link>
+                        </TableCell>
                         <TableCell>{form.field}</TableCell>
                         <TableCell>{form.createdAt.toLocaleString()}</TableCell>
                         <TableCell>
