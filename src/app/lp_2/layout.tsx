@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import { Noto_Kufi_Arabic } from "next/font/google";
+import { Cairo } from "next/font/google";
 
-const inter = Noto_Kufi_Arabic({ subsets: ["arabic"] });
+const inter = Cairo({ subsets: ["arabic"] });
 
 export const metadata: Metadata = {
     title: "ASBA",
