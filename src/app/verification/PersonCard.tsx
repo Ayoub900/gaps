@@ -47,7 +47,7 @@ export default async function PersonCard({ q }: CardProps) {
     return (
 
         <div className='flex flex-col justify-center gap-4 bg-white mx-auto min-w-[300px] w-full max-w-[560px] shadow-lg '>
-            {accreditation.type !== "VAE" &&
+            {accreditation.type !== "VAE" && accreditation.type !== "FORMATION" &&
                 <Image placeholder="blur" blurDataURL="data:..." className='mx-auto object-contain' width={700} height={500} alt={"id"} src={accreditation.imageUrl} />
             }
             {accreditation.diploma && accreditation.type !== "I" && accreditation.type !== "VAE" && accreditation.type !== "FORMATION" &&
