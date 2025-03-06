@@ -75,6 +75,15 @@ export default async function PersonCard({ q }: CardProps) {
                     </p>
                 </>
             }
+            {accreditation.diploma && accreditation.type === "FORMATION" &&
+                <>
+                    <h1 className='text-5xl text-green-600 font-medium text-center'>Verified</h1>
+                    <h1 className='text-xl p-4 font-semibold text-center'>Mr/Ms {accreditation.name}, CIN: {accreditation.cin}</h1>
+                    <p className='p-4 font-semibold text-center'>
+                        Based on the minutes of the review committee and under the supervision of the head of the examination committee, he has been awarded a <span className='text-red-500'>{accreditation.diploma}</span> .
+                    </p>
+                </>
+            }
         </div>
     )
 }
