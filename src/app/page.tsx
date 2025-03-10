@@ -20,7 +20,7 @@ export default async function Home() {
             ASB Academy
           </h1>
           <p className="text-white/80 max-w-5xl text-balance justify-center text-center">
-            Advanced Skills and Business Academy is an international leading institution dedicated to empowering individuals and organizations by providing internationally recognized accreditations and diplomas for various skills, excluding the medical and pharmaceutical fields. We believe that continuous education and training are the foundations of success and progress, and we are committed to supporting and developing professional and technical skills for all individuals and organizations.
+            ASB-Academy is an international leading institution dedicated to empowering individuals and organizations by providing internationally recognized accreditations and diplomas for various skills, excluding the medical and pharmaceutical fields. We believe that continuous education and training are the foundations of success and progress, and we are committed to supporting and developing professional and technical skills for all individuals and organizations.
           </p>
         </div>
 
@@ -35,7 +35,7 @@ export default async function Home() {
           <h1 className="text-5xl border-b-2 border-red-600 flex w-full"> Trademark warnings complain<Image className="object-contain h-full" src="/warning.svg" width={50} height={50} alt="warning" /></h1>
           <span className="bg-yellow-400 py-1 text-xl">ASBA doesn&apos;t have any websites except www.asba.org.uk, And we do not have any social media pages, </span>
           <p className="my-4 text-xl">
-            Advanced Skills and Business Academy (ASBA) is a registered trademark globally and locally,
+            ASB-Academy (ASBA) is a registered trademark globally and locally,
             you can find our governmental trademark certificate in about us section.
             You can verify our trademark accreditation holders through our official website or via Trademark@asba.org.uk</p>
 

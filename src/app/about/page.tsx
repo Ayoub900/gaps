@@ -10,7 +10,7 @@ export default function page() {
 
             <div className='min-h-screen flex flex-col px-4 md:px-24 relative space-y-4 my-4'>
                 <p className=''>
-                    <strong className='font-semibold'>Advanced Skills and Business Academy (ASBA)</strong> is an international leading institution dedicated to empowering individuals and organizations by providing internationally recognized accreditations and diplomas for various skills, excluding the medical and pharmaceutical fields, registered in 71-75 Shelton Street Covent Garden London WC2H 9JQ United Kingdom by number 15865484. We believe that continuous education and training are the foundations of success and progress, and we are committed to supporting and developing professional and technical skills for all individuals and organizations.
+                    <strong className='font-semibold'>ASB-Academy (ASBA)</strong> is an international leading institution dedicated to empowering individuals and organizations by providing internationally recognized accreditations and diplomas for various skills, excluding the medical and pharmaceutical fields, registered in 71-75 Shelton Street Covent Garden London WC2H 9JQ United Kingdom by number 15865484. We believe that continuous education and training are the foundations of success and progress, and we are committed to supporting and developing professional and technical skills for all individuals and organizations.
                 </p>
                 <h1 className='text-3xl font-semibold '>
                     Our Goals:
@@ -35,7 +35,7 @@ export default function page() {
                 </h1>
                 <p className=''>
                     In addition to providing accreditation and diplomas, we also offer training courses in collaboration with our accredited partners. These courses aim to enhance and develop the technical and professional skills of individuals and organizations, ensuring they meet the changing market demands and increase their chances of success in various fields.
-                    Advanced Skills and Business Academy is committed to transparency and integrity in all its dealings and always strives to provide the best services to our global community. We believe that every individual deserves the opportunity to realize their full potential, and we do our utmost to support this noble goal.
+                    ASB-Academy is committed to transparency and integrity in all its dealings and always strives to provide the best services to our global community. We believe that every individual deserves the opportunity to realize their full potential, and we do our utmost to support this noble goal.
                 </p>
             </div>
         </>
