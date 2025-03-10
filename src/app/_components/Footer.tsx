@@ -9,7 +9,7 @@ export default function Footer() {
                 <div className='flex flex-col justify-center items-center'>
                     <Image src={'/logo_2.png'} width={200} height={200} alt='logo' />
                     <h1 className="text-4xl font-semibold text-white">ASB Academy</h1>
-                    <p className='text-white/70 text-center '>Advanced Skills <br />& Business Academy<br /> Support@asbacademy.co.uk
+                    <p className='text-white/70 text-center '> Support@asbacademy.co.uk
                     </p>
                 </div>
                 <div className='flex flex-col justify-center '>
