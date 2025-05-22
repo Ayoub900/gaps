@@ -47,10 +47,10 @@ export default async function PersonCard({ q }: CardProps) {
     return (
 
         <div className='flex flex-col justify-center gap-4 bg-white mx-auto min-w-[300px] w-full max-w-[560px] shadow-lg '>
-            {accreditation.type !== "VAE" && accreditation.type !== "FORMATION" &&
+            {accreditation.type !== "VAE" && accreditation.type !== "FORMATION" && accreditation.type !== "EDU" &&
                 <Image placeholder="blur" blurDataURL="data:..." className='mx-auto object-contain' width={700} height={500} alt={"id"} src={accreditation.imageUrl} />
             }
-            {accreditation.diploma && accreditation.type !== "I" && accreditation.type !== "VAE" && accreditation.type !== "FORMATION" &&
+            {accreditation.diploma && accreditation.type !== "I" && accreditation.type !== "VAE" && accreditation.type !== "FORMATION" && accreditation.type !== "EDU" &&
                 <p className='p-4 font-semibold'>
                     has completed the necessary training and assessment to demonstrate competence and understanding within this field. The International Education ASB-Academy awards this certificate in recognition of the achievement <span className='text-red-500'>{accreditation.diploma}</span>
                     with all the rights, privileges, and honors thereto
@@ -81,6 +81,15 @@ export default async function PersonCard({ q }: CardProps) {
                     <h1 className='text-xl p-4 font-semibold text-center'>Mr/Ms {accreditation.name}, CIN: {accreditation.cin}</h1>
                     <p className='p-4 font-semibold text-center'>
                         Based on the minutes of the review committee and under the supervision of the head of the examination committee, he has been awarded a <span className='text-red-500'>{accreditation.diploma}</span> .
+                    </p>
+                </>
+            }
+            {accreditation.diploma && accreditation.type === "EDU" &&
+                <>
+                    <h1 className='text-5xl text-green-600 font-medium text-center'>Verified</h1>
+                    <h1 className='text-xl p-4 font-semibold text-center'>Mr/Ms {accreditation.name}, CIN: {accreditation.cin}</h1>
+                    <p className='p-4 font-semibold text-center'>
+                        Based on the minutes of the Examination and Evaluation Committee, and following the successful completion of the intensive training program, the candidate has been awarded a <span className='text-red-500'>{accreditation.diploma}</span> .
                     </p>
                 </>
             }
