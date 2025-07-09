@@ -60,10 +60,10 @@ export default function LoginForm() {
                 callbackUrl,
             });
 
-            if(res.error) {
-                if(res.error === 'CredentialsSignin') {
+            if(!res?.error) {
+                if(res?.error === 'CredentialsSignin') {
                     setError('Please check your credentials and try again!')
-                }else setError(res.error)
+                }else setError("Something went wrong. please try again later")
 
             }else {
                 
@@ -75,7 +75,7 @@ export default function LoginForm() {
         } catch (error: any) {
             setPending(false);
             console.log(error)
-            setError('something went wrong. try again later');
+            setError('Something went wrong. try again later');
         }
 
     }
