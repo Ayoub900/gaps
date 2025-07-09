@@ -60,11 +60,12 @@ export default function LoginForm() {
                 callbackUrl,
             });
 
-            if(!res?.error) {
-                if(res?.error === 'CredentialsSignin') {
+            if(res?.error) {
+                if(res.error === 'CredentialsSignin') {
                     setError('Please check your credentials and try again!')
-                }else setError("Something went wrong. please try again later")
-
+                }else {
+                    setError("Something went wrong. please try again later")
+                }
             }else {
                 
                 router.push(callbackUrl);
