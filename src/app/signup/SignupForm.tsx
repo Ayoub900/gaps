@@ -144,9 +144,8 @@ export default function SignupForm() {
                     </div>
                 }
                 <Button
-                    className="bg-[#050c45] hover:bg-blue-900"
                     disabled={pending}
-                    className={"text-md"}
+                    className={"text-md bg-[#050c45] hover:bg-blue-900"}
                 >
                     Signup
                 </Button>
