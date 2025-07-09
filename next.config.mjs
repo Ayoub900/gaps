@@ -2,7 +2,7 @@
 const nextConfig = {
     images: {
         remotePatterns: [
-            {hostname: "asba-verefications.s3.amazonaws.com"},
+            {hostname: "gaps-verefications.s3.amazonaws.com"},
         ],
       },
 };

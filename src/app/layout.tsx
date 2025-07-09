@@ -8,8 +8,8 @@ import SessionProvider from "./SessionProvider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "ASBA",
-  description: "",
+  title: "GAPS",
+  description: "Global Academy Of Professional Skills",
 };
 
 export default function RootLayout({
