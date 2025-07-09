@@ -19,20 +19,6 @@ export default function IdItem({ id }: { id: Id }) {
 
     return (
         <Card className="overflow-hidden">
-            <div className="relative h-48 w-full">
-                {id.imageUrl ? (
-                    <Image
-                        src={id.imageUrl}
-                        alt={id.name || 'ID image'}
-                        layout="fill"
-                        objectFit="cover"
-                    />
-                ) : (
-                    <div className="flex h-full w-full items-center justify-center bg-gray-200 text-gray-500">
-                        No image available
-                    </div>
-                )}
-            </div>
             <CardContent className="grid grid-cols-2 gap-4 p-6">
                 <div>
                     <p className="text-sm font-medium text-gray-500">Name</p>
@@ -60,7 +46,7 @@ export default function IdItem({ id }: { id: Id }) {
                 </div>
             </CardContent>
             <CardFooter className="flex justify-end space-x-2 bg-gray-50 p-6">
-                <Button onClick={() => setIsEditing(true)}>Edit</Button>
+                <Button className='bg-[#050c45] hover:bg-blue-900' onClick={() => setIsEditing(true)}>Edit</Button>
                 <Button variant="destructive" onClick={() => setIsDeleting(true)}>Delete</Button>
             </CardFooter>
             <IdForm id={id} isOpen={isEditing} onClose={() => setIsEditing(false)} />

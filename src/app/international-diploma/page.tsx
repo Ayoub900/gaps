@@ -4,105 +4,80 @@ import { redirect } from 'next/navigation'
 import React from 'react'
 import FormSubmitButton from '../_components/ui/FormSubmitButton'
 import Link from 'next/link'
+import Form from './Form'
 
 interface PageProps {
     searchParams: {
-        s: '1' | '0'
-    }
+        success: string,
+        error: string,
+    },
 }
 
 export const metadata: Metadata = {
-    title: "ASBA | Diploma",
+    title: "GAPS | Diploma",
     openGraph: {
         images: '/logo.png',
     },
 };
 
-export default function page({ searchParams: { s } }: PageProps) {
-    const handleSubmit = async (formData: FormData) => {
-        "use server"
-        const name = formData.get('name')?.toString()
-        const country = formData.get('country')?.toString()
-        const email = formData.get('email')?.toString()
-        const phone = Number(formData.get('phone')) | 0
-        const whatsapp = Number(formData.get('whatsapp')) | 0
-        const job = formData.get('job')?.toString()
+export default function page({
+    searchParams: { success, error },
+}: PageProps) {
 
-        if (!name || !country || !email || !phone || !whatsapp || !job) {
-            throw new Error('missing inputs')
-        }
-
-        try {
-            await db.internationalDiploma.create({
-                data: {
-                    name,
-                    country,
-                    phone,
-                    whatsapp,
-                    email,
-                    job,
-                }
-            })
-        } catch (error) {
-            throw new Error("couldn't save the request!!")
-        }
-
-        console.log("finish")
-        redirect('?s=1')
-    }
     return (
         <div className='flex flex-col justify-center p-4 md:p-24'>
-            <form action={handleSubmit} className='p-4 mx-auto bg-white  max-w-3xl'>
-                <p className='mb-8'>
-                    <h1 className='text-3xl font-semibold'>Accreditation</h1>
-                    <br />
-                    If you are an organization or training or educational center, here is your right place to obtain excellence.
-                    <br />
-                    <br />
-                    You can obtain the name of :
-                    <br />
-                    <br />
-                    An accredited organization.
-                    An accredited agent.
-                    An accredited exclusive agent in you country.
-                    To learn more about the conditions, features and fees,
-                    fill out the form and we will get back to you as soon as possible.
-                    <br />
-                    <br />
+            <div className="max-w-2xl mx-auto">
+
+                <h2 className="text-3xl font-bold text-blue-700 mb-6">🌍 Get Certified with GAPS</h2>
+                <p className="mb-6 text-lg">
+                    Boost Your Career with an Internationally Accredited Diploma
                 </p>
-                <h1 className='text-3xl font-semibold'>International Diploma Form</h1>
-                <p className='mb-2'>(*) required fields.</p>
-                <label className='flex flex-col'>
-                    Name *
-                    <input name='name' className='p-3 mb-3 border border-gray/70 outline-none' type="text" required />
-                </label>
-                <label className='flex flex-col'>
-                    Country *
-                    <input name='country' className='p-3 mb-3 border border-gray/70 outline-none' type="text" required />
-                </label>
-                <label className='flex flex-col'>
-                    Email *
-                    <input name='email' className='p-3 mb-3 border border-gray/70 outline-none' type="email" required />
-                </label>
-                <label className='flex flex-col'>
-                    Phone *
-                    <input name='phone' className='p-3 mb-3 border border-gray/70 outline-none' type='tel' required />
-                </label>
-                <label className='flex flex-col'>
-                    Whatsapp *
-                    <input name='whatsapp' className='p-3 mb-3 border border-gray/70 outline-none' type='tel' required />
-                </label>
-                <label className='flex flex-col'>
-                    job (*)
-                    <input name='job' className='p-3 mb-3 border border-gray/70 outline-none' type='tel' required />
-                </label>
-                {s && s === '1' ? (
-                    <div className='p-4 text-green-500'>
-                        <h1>your request has been sent!</h1>
+
+                <h2 className="text-2xl font-semibold text-blue-700 mb-4">🎓 Why Choose a GAPS Diploma?</h2>
+                <ul className="list-disc list-inside text-lg space-y-2">
+                    <li>✅ Internationally recognized certification</li>
+                    <li>✅ Practical and career-focused training</li>
+                    <li>✅ Delivered by industry experts and native professionals</li>
+                    <li>✅ Listed in the GAPS Public Registry for global verification</li>
+                    <li>✅ Available 100% online or in hybrid format</li>
+                </ul>
+
+                <p className="mt-6 mb-6 text-lg">
+                    Whether you&apos;re looking to upskill, change careers, or gain international credibility — GAPS Diplomas are your gateway to professional growth.
+                </p>
+
+                <h2 className="text-2xl font-semibold text-blue-700 mb-4">🏆 Available Diploma Fields:</h2>
+                <ul className="list-disc list-inside text-lg space-y-2">
+                    <li>✅ Information Technology (IT)</li>
+                    <li>✅ Logistics & Supply Chain</li>
+                    <li>✅ Business Management & Administration</li>
+                    <li>✅ Quality Management</li>
+                    <li>✅ Digital Commerce & Marketing</li>
+                    <li>✅ Technical and Service Professions</li>
+                    <li>✅ Sports Professions</li>
+                    <li>✅ Private Security</li>
+                    <li>✅ Social Media Professions</li>
+                    <li>✅ Photography</li>
+                    <li>✅ English, French, Spanish, German, Dutch, Chinese Languages</li>
+                </ul>
+
+                <h2 className="text-2xl font-semibold text-blue-700 mt-10 mb-4">📝 Request Your Diploma Now</h2>
+                <p className="text-lg mb-4">
+                    Fill out the form below and our team will contact you with program details, pricing, and registration steps.
+                </p>
+            </div>
+
+            {success && success === "1" ?
+                <div className="w-2xl mx-auto py-8 px-4 bg-green-600 text-white text-2xl font-bold">
+                    Your application has been sent successfully!
+                </div>
+                : (error && error === "1" ?
+                    <div className="w-2xl mx-auto py-8 px-4 bg-red-600 text-white text-2xl font-bold">
+                        Something has gone wrong, please try again later!
                     </div>
+                    : <Form title={"International diploma"} />
                 )
-                    : <FormSubmitButton>Apply</FormSubmitButton>}
-            </form>
+            }
         </div>
     )
 }

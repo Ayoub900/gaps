@@ -13,7 +13,7 @@ export default function DashboardPage() {
         <div className="container mx-auto px-4 py-10">
             <div className="flex items-center justify-between mb-8">
                 <h1 className="text-4xl font-bold">ID Dashboard</h1>
-                <Button onClick={() => setIsCreating(true)}>Add New ID</Button>
+                <Button className='bg-[#050c45] hover:bg-blue-900' onClick={() => setIsCreating(true)}>Add New ID</Button>
             </div>
             <Suspense fallback={<div>Loading...</div>}>
                 <IdList />

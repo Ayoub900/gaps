@@ -19,7 +19,6 @@ export async function createId(formData: FormData) {
     const cin = formData.get('cin') as string | null
     const diploma = formData.get('diploma') as string | null
     const type = formData.get('type') as string | null
-    const imageUrl = formData.get('imageUrl') as string
 
     await db.id.create({
         data: {
@@ -28,7 +27,6 @@ export async function createId(formData: FormData) {
             cin,
             diploma,
             type,
-            imageUrl,
         },
     })
     revalidatePath('/dashboard')
@@ -40,7 +38,6 @@ export async function updateId(id: string, formData: FormData) {
     const cin = formData.get('cin') as string | null
     const diploma = formData.get('diploma') as string | null
     const type = formData.get('type') as string | null
-    const imageUrl = formData.get('imageUrl') as string
 
     await db.id.update({
         where: { id },
@@ -50,7 +47,6 @@ export async function updateId(id: string, formData: FormData) {
             cin,
             diploma,
             type,
-            imageUrl,
         },
     })
     revalidatePath('/dashboard')
@@ -61,16 +57,9 @@ export async function deleteId(id: string) {
     revalidatePath('/dashboard')
 }
 
-// lps
-export async function getLPForms() {
-    return db.lpForm.findMany({
+export async function getApplications() {
+    return db.application.findMany({
         orderBy: { createdAt: 'desc' }
     })
 }
 
-export async function updateLPFormStatus(id: string, status: 'waiting' | 'processing' | 'processed') {
-    await db.lpForm.update({
-        where: { id },
-        data: { status }
-    })
-}

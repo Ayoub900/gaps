@@ -3,7 +3,7 @@ import React from 'react'
 export default function page() {
     return (
         <>
-            <div className='flex min-h-[220px] flex-col items-center justify-center bg-red-800 px-4 md:px-24 relative'>
+            <div className='flex min-h-[220px] flex-col items-center justify-center bg-[#050c45] px-4 md:px-24 relative'>
                 <h1 className='text-5xl font-semibold text-white/95'>About Us</h1>
                 <p className='text-white/80'>Discover more about us in this page!</p>
             </div>

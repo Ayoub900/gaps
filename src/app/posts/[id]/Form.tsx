@@ -46,18 +46,18 @@ export default function Form({ title }: { title: string }) {
 
     }
     return (
-        <form action={handleSubmit} className='flex w-full max-w-2xl mx-auto flex-col space-y-4'>
+        <form action={handleSubmit} className='flex w-full max-w-2xl p-4 mx-auto flex-col space-y-4'>
             <label className='flex flex-col' htmlFor="name">Full Name:
-                <input className='p-3 rounded-md border border-gray-400' name='name' type="text" required />
+                <input className='p-3 border border-gray-400' name='name' type="text" required />
             </label>
             <label className='flex flex-col' htmlFor="name">Country:
-                <input className='p-3 rounded-md border border-gray-400' name='country' type="text" required />
+                <input className='p-3 border border-gray-400' name='country' type="text" required />
             </label>
             <label className='flex flex-col' htmlFor="name">Phone:
-                <input className='p-3 rounded-md border border-gray-400' name='phone' type="text" required />
+                <input className='p-3 border border-gray-400' name='phone' type="text" required />
             </label>
             <label className='flex flex-col' htmlFor="name">Email:
-                <input className='p-3 rounded-md border border-gray-400' name='email' type="text" required />
+                <input className='p-3 border border-gray-400' name='email' type="text" required />
             </label>
             <FormSubmitButton>Apply</FormSubmitButton>
         </form>

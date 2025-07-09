@@ -23,11 +23,6 @@ interface IdFormProps {
 
 export default function IdForm({ id, isOpen, onClose }: IdFormProps) {
     const [isLoading, setIsLoading] = useState(false)
-    const [imagePreview, setImagePreview] = useState(id?.imageUrl || '')
-
-    useEffect(() => {
-        setImagePreview(id?.imageUrl || '')
-    }, [id])
 
     const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault()
@@ -46,10 +41,6 @@ export default function IdForm({ id, isOpen, onClose }: IdFormProps) {
         } finally {
             setIsLoading(false)
         }
-    }
-
-    const handleImageUrlChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setImagePreview(e.target.value)
     }
 
     return (
@@ -77,9 +68,9 @@ export default function IdForm({ id, isOpen, onClose }: IdFormProps) {
                     </div>
                     <div>
                         <Label htmlFor="type">Type</Label>
-                        <Input id="type" name="type" defaultValue={id?.type || ''} />
+                        <Input id="type" name="type" defaultValue={id?.type || 'EDU'} />
                     </div>
-                    <div>
+                    {/* <div>
                         <Label htmlFor="imageUrl">Image URL</Label>
                         <Input
                             id="imageUrl"
@@ -88,18 +79,8 @@ export default function IdForm({ id, isOpen, onClose }: IdFormProps) {
                             onChange={handleImageUrlChange}
 
                         />
-                    </div>
-                    {imagePreview && (
-                        <div className="relative h-48 w-full">
-                            <Image
-                                src={imagePreview}
-                                alt="Image preview"
-                                layout="fill"
-                                objectFit="cover"
-                                className="rounded-md"
-                            />
-                        </div>
-                    )}
+                    </div> */}
+
                     <DialogFooter>
                         <Button type="button" variant="outline" onClick={onClose}>
                             Cancel

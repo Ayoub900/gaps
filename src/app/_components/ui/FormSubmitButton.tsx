@@ -19,7 +19,7 @@ export default function FormSubmitButton({
     return (
         <button
             {...props}
-            className={`bg-red-600 flex flex-row justify-center items-center active:bg-red-600/70 py-2 px-6 text-white gap-2 ${className}`}
+            className={`bg-[#050c45] flex flex-row justify-center items-center active:bg-[#050c45]/70 py-2 px-6 text-white gap-2 ${className}`}
             type="submit"
             disabled={pending}
         >

@@ -45,7 +45,7 @@ export default async function postPage({
     const post = await getpost(id);
     return (
         <>
-            <div className="w-full h-[450px] relative">
+            <div className="h-[180px] w-full md:h-[450px] relative">
                 <Image className="object-cover" src={post.imageUrl} fill alt={post.title} />
             </div>
             <div className="min-h-screen flex flex-col px-4 md:px-24 relative space-y-4 my-4">
