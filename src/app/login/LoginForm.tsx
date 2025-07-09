@@ -53,26 +53,36 @@ export default function LoginForm() {
         setPending(true)
         setError("")
         try {
-            await signIn("credentials", {
+            const res = await signIn("credentials", {
                 redirect: false,
                 email: data.email,
                 password: data.password,
                 callbackUrl,
             });
 
+            if(res.error) {
+                if(res.error === 'CredentialsSignin') {
+                    setError('Please check your credentials and try again!')
+                }else setError(res.error)
+
+            }else {
+                
+                router.push(callbackUrl);
+            }
+
             setPending(false);
 
         } catch (error: any) {
             setPending(false);
-            setError(error);
+            console.log(error)
+            setError('something went wrong. try again later');
         }
 
-        router.push(callbackUrl);
     }
 
     return (
         <Form {...form} >
-            <form onSubmit={form.handleSubmit(onSubmit)} className="w-full space-y-3">
+            <form onSubmit={form.handleSubmit(onSubmit)} className="w-full md:min-w-[360px] space-y-3">
                 <FormField
                     control={form.control}
                     name="email"
