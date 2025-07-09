@@ -31,19 +31,19 @@ export default async function Home() {
       </div>
 
       <div id="accreditation" className="gap-4 mx-auto my-12 flex flex-col justify-center md:flex-row px-4 md:px-24">
-        <Image className="bg-[#050c45]" src="/logo_gaps2.png" width={500} height={500} alt="logo" />
+        <Image className="bg-[#050c45] md:max-w-[380px] md:max-h-[380px]" src="/logo_gaps2.png" width={500} height={500} alt="logo" />
         <div className="space-y-4 text-center flex flex-col">
           <div className="flex flex-col w-full border border-[#050c45]">
             <h1 className="p-4 text-center justify-center bg-[#050c45] hover:bg-[#050c45] text-white/80">Verification</h1>
             <div className="p-4 flex flex-col space-y-4">
-              <Link className="flex text-center justify-center p-4 w-full bg-black/90 hover:bg-[#050c45] " href="/verification"><Image src="/link.svg" width={20} height={20} alt="logo" /></Link>
+              <Link className="flex text-center justify-center p-4 w-full bg-[#e49400] hover:bg-amber-600 " href="/verification"><Image src="/link.svg" width={20} height={20} alt="logo" /></Link>
               <h1>Verification</h1>
             </div>
           </div>
           <div className="flex flex-col w-full border border-[#050c45]">
             <h1 className="p-4 text-center justify-center bg-[#050c45] hover:bg-[#050c45] text-white/80">Diploma</h1>
             <div className="p-4 flex flex-col space-y-4">
-              <Link className="flex text-center justify-center p-4 w-full bg-black/90 hover:bg-[#050c45] " href="/international-diploma"><Image src="/link.svg" width={20} height={20} alt="logo" /></Link>
+              <Link className="flex text-center justify-center p-4 w-full bg-[#e49400] hover:bg-amber-600 " href="/international-diploma"><Image src="/link.svg" width={20} height={20} alt="logo" /></Link>
               <h1>International Diploma</h1>
             </div>
           </div>

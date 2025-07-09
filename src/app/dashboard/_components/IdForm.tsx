@@ -69,16 +69,6 @@ export default function IdForm({ id, isOpen, onClose }: IdFormProps) {
                         <Label htmlFor="type">Type</Label>
                         <Input id="type" name="type" defaultValue={id?.type || 'EDU'} />
                     </div>
-                    {/* <div>
-                        <Label htmlFor="imageUrl">Image URL</Label>
-                        <Input
-                            id="imageUrl"
-                            name="imageUrl"
-                            defaultValue={id?.imageUrl || ''}
-                            onChange={handleImageUrlChange}
-
-                        />
-                    </div> */}
 
                     <DialogFooter>
                         <Button type="button" variant="outline" onClick={onClose}>

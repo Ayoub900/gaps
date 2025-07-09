@@ -110,7 +110,7 @@ export default function LoginForm() {
                 </div>}
                 <Button
                     disabled={pending}
-                    className={"text-md"}
+                    className={"text-md bg-[#050c45] hover:bg-blue-900"}
                 >
                     Login
                 </Button>

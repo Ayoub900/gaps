@@ -9,7 +9,7 @@ export default function Footer() {
                 <div className='flex flex-col justify-center items-center'>
                     <Image src={'/logo_gaps8.png'} width={200} height={200} alt='logo' />
                     <h1 className="text-4xl font-semibold text-white">Global Academy of Professional Skills</h1>
-                    <p className='text-white/70 text-center '> Support@gapsacademy.co.uk
+                    <p className='text-white/70 text-center '> academygaps@gmail.com
                     </p>
                 </div>
                 <div className='flex flex-col justify-center '>
@@ -17,12 +17,9 @@ export default function Footer() {
                     <div className='px-4 flex flex-col'>
                         <Link className='text-white/70 underline p-2' href={'/'}>Home</Link>
                         <Link className='text-white/70 underline p-2' href={'/about'}>About Us</Link>
-                        {/* <Link className='text-white/70 underline p-2' href={'/institutions-acc'}>Accreditation Of Institutions</Link> */}
-                        {/* <Link className='text-white/70 underline p-2' href={'/instructors-acc'}>Accreditation Of Instructors</Link> */}
                         <Link className='text-white/70 underline p-2' href={'/posts/686a566d0cb9966c44354e0b'}>Certification</Link>
                         <Link className='text-white/70 underline p-2' href={'/international-diploma'}>International Diploma</Link>
                         <Link className='text-white/70 underline p-2' href={'/verification'}>Verification</Link>
-                        {/* <Link className='text-white/70 underline p-2' href={'/verification'}>Verifaction</Link> */}
                     </div>
                 </div>
             </div>
