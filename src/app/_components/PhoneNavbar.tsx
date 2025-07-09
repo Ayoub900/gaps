@@ -19,11 +19,7 @@ export default function PhoneNavbar() {
                     </label>
                     <div className='flex flex-col gap-4 text-black font-semibold'>
                         <a className='hover:text-[#e49400] transition-all duration-300 py-2' href={'/'}>Home</a>
-                        {/* <a className='hover:text-[#e49400] transition-all duration-300 py-2' href={'/posts/670f8b0e1f5bc8aa0d07cbf8'}>Accreditation</a> */}
                         <a className='hover:text-[#e49400] transition-all duration-300 py-2' href={'/posts/686a566d0cb9966c44354e0b'}>Certification</a>
-                        {/* <a className='hover:text-[#e49400] transition-all duration-300 py-2' href={'/posts/670f8e1bc4487330a2942826'}>VAE</a> */}
-                        {/* <a className='hover:text-[#e49400] transition-all duration-300 py-2' href={'https://asba.org.uk/institutions-acc'}>Institutions Accreditation</a> */}
-                        {/* <a className='hover:text-[#e49400] transition-all duration-300 py-2' href={'https://asba.org.uk/instructors-acc'}>Instructors Accreditation</a> */}
                         <a className='hover:text-[#e49400] transition-all duration-300 py-2' href={'/international-diploma'}>International Diploma</a>
                         <a className='hover:text-[#e49400] transition-all duration-300 py-2' href={'/verification'}>Verification</a>
                         <a className='hover:text-[#e49400] transition-all duration-300 py-2' href={'/about'}>About Us</a>

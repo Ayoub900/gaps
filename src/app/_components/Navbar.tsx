@@ -17,26 +17,10 @@ export default async function Navbar() {
                 </Link>
                 <div className=' flex-row hidden md:flex items-center gap-1 text-black font-semibold'>
                     <Link className='hover:text-[#e49400] transition-all duration-300 p-4' href={'/'}>Home</Link>
-                    {/* <Link className='hover:text-[#e49400] transition-all duration-300 p-4' href={'/posts/670f8b0e1f5bc8aa0d07cbf8'}>Accreditation</Link> */}
                     <Link className='hover:text-[#e49400] transition-all duration-300 p-4' href={'/posts/686a566d0cb9966c44354e0b'}>Certification</Link>
-                    {/* <Link className='hover:text-[#e49400] transition-all duration-300 p-4' href={'/posts/670f8e1bc4487330a2942826'}>VAE</Link> */}
-                    {/* <span className='group relative transition-all duration-300 h-full flex flex-col justify-center'>
-                        <span className='gap-2 flex flex-row hover:text-[#e49400] cursor-pointer'>
-                            Accreditation Membership
-                            <Image className='group-hover:rotate-180 transition-all duration-300 ease-in-out' src={'/arrow_black.svg'} width={20} height={20} alt='arrow' />
-                        </span>
-                        <div className=' hidden submenu z-[999] bg-[#e49400] shadow-lg -translate-x-2 flex-row group-hover:flex group-hover:translate-x-0 transition-all duration-300 ease-in-out delay-100 absolute top-[50px] -left-[200px]'>
-                            <div className='p-4 mt-2 flex flex-col w-[300px]'>
-                                <Link className=' text-white/90 mb-2 p-2' href={'https://asba.org.uk/institutions-acc'}>Institutions Accreditation</Link>
-                                <Link className=' text-white/90 mb-2 p-2' href={'https://asba.org.uk/instructors-acc'}>Instructors Accreditation</Link>
-                                <Link className=' text-white/90 mb-2 p-2' href={'https://asba.org.uk/international-diploma'}>International Diploma</Link>
-                            </div>
-                        </div>
-                    </span> */}
                     <Link className='hover:text-[#e49400] transition-all duration-300 p-4' href={'/international-diploma'}>International Diploma</Link>
                     <Link className='hover:text-[#e49400] transition-all duration-300 p-4' href={'/verification'}>Verification</Link>
                     <Link className='hover:text-[#e49400] transition-all duration-300 p-4' href={'/about'}>About Us</Link>
-                    {/* <Link className='hover:text-[#e49400] transition-all duration-300 p-4' href={'/about'}>Verifaction</Link> */}
                 </div >
             </div >
             <div className='flex md:hidden flex-row justify-between px-4 items-center relative'>

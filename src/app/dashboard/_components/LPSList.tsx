@@ -1,7 +1,5 @@
 import { getApplications } from '@/lib/actions'
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table'
-import LPSStatusCell from './LPSStatusCell'
-import Link from 'next/link'
 
 export default async function Component() {
     const applications = await getApplications()

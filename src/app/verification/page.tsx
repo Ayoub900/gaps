@@ -11,11 +11,11 @@ interface PageProps {
 }
 
 export const metadata: Metadata = {
-    title: "ASBA | Accreditation Verification",
+    title: "GAPS | Accreditation Verification",
     openGraph: {
         images: [
             {
-                url: 'https://www.asba.org.uk/logo.png',
+                url: 'https://www.gapsacademy.org.uk/logo_gaps1.png',
                 width: 800,
                 height: 600,
             },
