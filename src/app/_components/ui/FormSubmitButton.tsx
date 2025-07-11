@@ -10,20 +10,24 @@ type FormSubmitButtonProps = {
 
 export default function FormSubmitButton({
     children,
-    className,
+    className = "",
     ...props
 }: FormSubmitButtonProps) {
-
     const { pending } = useFormStatus();
 
     return (
         <button
             {...props}
-            className={`bg-[#050c45] flex flex-row justify-center items-center active:bg-[#050c45]/70 py-2 px-6 text-white gap-2 ${className}`}
-            type="submit"
-            disabled={pending}
+            type={props.type ?? "submit"}
+            disabled={pending || props.disabled}
+            aria-busy={pending}
+            className={`bg-[#e49400] text-white hover:bg-amber-600 flex justify-center items-center py-2 px-6 gap-2 rounded transition-colors duration-200
+        active:bg-amber-600 disabled:opacity-60 disabled:cursor-not-allowed
+        ${className}`}
         >
-            {pending && <span className="min-w-4 min-h-4 w-4 h-4 border-2 border-white rounded-full animate-spin border-b-white/70 " />}
+            {pending && (
+                <span className="w-4 h-4 border-2 border-white rounded-full animate-spin border-b-white/70" />
+            )}
             {children}
         </button>
     );

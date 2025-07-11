@@ -60,14 +60,14 @@ export default function LoginForm() {
                 callbackUrl,
             });
 
-            if(res?.error) {
-                if(res.error === 'CredentialsSignin') {
+            if (res?.error) {
+                if (res.error === 'CredentialsSignin') {
                     setError('Please check your credentials and try again!')
-                }else {
+                } else {
                     setError("Something went wrong. please try again later")
                 }
-            }else {
-                
+            } else {
+
                 router.push(callbackUrl);
             }
 
@@ -82,8 +82,8 @@ export default function LoginForm() {
     }
 
     return (
-        <Form {...form} >
-            <form onSubmit={form.handleSubmit(onSubmit)} className="w-full md:min-w-[360px] space-y-3">
+        <Form {...form}>
+            <form onSubmit={form.handleSubmit(onSubmit)} className="w-full space-y-3">
                 <FormField
                     control={form.control}
                     name="email"
@@ -91,15 +91,20 @@ export default function LoginForm() {
                         <FormItem>
                             <FormLabel>Email</FormLabel>
                             <FormControl>
-                                <Input type="email" required placeholder="yourname@example.com" {...field} />
+                                <Input
+                                    className="w-full !ring-[#e49400] focus:ring-2"
+                                    type="email"
+                                    required
+                                    placeholder="yourname@example.com"
+                                    {...field}
+                                />
                             </FormControl>
-                            <FormDescription>
-                                your email address.
-                            </FormDescription>
+                            <FormDescription>your email address.</FormDescription>
                             <FormMessage />
                         </FormItem>
                     )}
                 />
+
                 <FormField
                     control={form.control}
                     name="password"
@@ -107,25 +112,32 @@ export default function LoginForm() {
                         <FormItem>
                             <FormLabel>Password</FormLabel>
                             <FormControl>
-                                <Input type="password" required min={8} max={40} {...field} />
+                                <Input
+                                    className="w-full !ring-[#e49400] focus:ring-2"
+                                    type="password"
+                                    required
+                                    minLength={8}
+                                    maxLength={40}
+                                    {...field}
+                                />
                             </FormControl>
-                            <FormDescription>
-                                Your passowrd
-                            </FormDescription>
+                            <FormDescription>Your password</FormDescription>
                             <FormMessage />
                         </FormItem>
                     )}
                 />
-                {error && <div className="bg-red-200/50 dark:bg-red-500/50 rounded-md p-3">
-                    <span className="text-red-500 dark:text-red-200">{error}</span>
-                </div>}
-                <Button
-                    disabled={pending}
-                    className={"text-md bg-[#050c45] hover:bg-blue-900"}
-                >
+
+                {error && (
+                    <div className="bg-red-200/50 dark:bg-red-500/50 rounded-md p-3">
+                        <span className="text-red-500 dark:text-red-200">{error}</span>
+                    </div>
+                )}
+
+                <Button disabled={pending} className="text-md bg-[#e49400] hover:bg-amber-600 text-white">
                     Login
                 </Button>
             </form>
         </Form>
+
     )
 }

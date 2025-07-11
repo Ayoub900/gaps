@@ -57,9 +57,18 @@ export async function deleteId(id: string) {
     revalidatePath('/dashboard')
 }
 
-export async function getApplications() {
-    return db.application.findMany({
-        orderBy: { createdAt: 'desc' }
-    })
+export async function getApplications({ skip = 0, take = 6 } = {}) {
+    const [applications, totalCount] = await Promise.all([
+        db.application.findMany({
+            skip,
+            take,
+            orderBy: { createdAt: 'desc' },
+        }),
+        db.application.count(),
+    ])
+
+    const totalPages = Math.ceil(totalCount / take)
+
+    return { applications, totalCount: totalPages }
 }
 

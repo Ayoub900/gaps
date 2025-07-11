@@ -46,20 +46,60 @@ export default function Form({ title }: { title: string }) {
 
     }
     return (
-        <form action={handleSubmit} className='flex w-full max-w-2xl p-4 mx-auto flex-col space-y-4'>
-            <label className='flex flex-col' htmlFor="name">Full Name:
-                <input className='p-3 border border-gray-400' name='name' type="text" required />
+        <form
+            action={handleSubmit}
+            className="flex w-full max-w-2xl p-4 mx-auto flex-col space-y-6"
+        >
+            <label htmlFor="name" className="flex flex-col font-medium text-gray-700">
+                Full Name:
+                <input
+                    id="name"
+                    name="name"
+                    type="text"
+                    required
+                    placeholder="Your full name"
+                    className="p-3 border border-gray-400 rounded-md focus:outline-none focus:ring-2 focus:ring-[#e49400]"
+                />
             </label>
-            <label className='flex flex-col' htmlFor="name">Country:
-                <input className='p-3 border border-gray-400' name='country' type="text" required />
+
+            <label htmlFor="country" className="flex flex-col font-medium text-gray-700">
+                Country:
+                <input
+                    id="country"
+                    name="country"
+                    type="text"
+                    required
+                    placeholder="Your country"
+                    className="p-3 border border-gray-400 rounded-md focus:outline-none focus:ring-2 focus:ring-[#e49400]"
+                />
             </label>
-            <label className='flex flex-col' htmlFor="name">Phone:
-                <input className='p-3 border border-gray-400' name='phone' type="text" required />
+
+            <label htmlFor="phone" className="flex flex-col font-medium text-gray-700">
+                Phone:
+                <input
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    required
+                    placeholder="Your phone number"
+                    className="p-3 border border-gray-400 rounded-md focus:outline-none focus:ring-2 focus:ring-[#e49400]"
+                />
             </label>
-            <label className='flex flex-col' htmlFor="name">Email:
-                <input className='p-3 border border-gray-400' name='email' type="text" required />
+
+            <label htmlFor="email" className="flex flex-col font-medium text-gray-700">
+                Email:
+                <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    required
+                    placeholder="Your email address"
+                    className="p-3 border border-gray-400 rounded-md focus:outline-none focus:ring-2 focus:ring-[#e49400]"
+                />
             </label>
+
             <FormSubmitButton>Apply</FormSubmitButton>
         </form>
+
     )
 }

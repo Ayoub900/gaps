@@ -1,42 +1,57 @@
 import React from 'react'
 
-export default function page() {
+export default function AboutPage() {
     return (
         <>
-            <div className='flex min-h-[220px] flex-col items-center justify-center bg-[#050c45] px-4 md:px-24 relative'>
-                <h1 className='text-5xl font-semibold text-white/95'>About Us</h1>
-                <p className='text-white/80'>Discover more about us in this page!</p>
+            <div className="flex min-h-[220px] flex-col items-center justify-center bg-[#050c45] px-6 md:px-24 relative">
+                <h1 className="text-5xl font-semibold text-white/95 mb-2">About Us – GAPS Academy</h1>
+                <p className="text-white/80 text-lg text-center max-w-3xl">
+                    Empowering individuals through accredited, practical, and global education.
+                </p>
             </div>
 
-            <div className='min-h-screen flex flex-col px-4 md:px-24 relative space-y-4 my-4'>
-                <p className=''>
-                    <strong className='font-semibold'>ASB-Academy (ASBA)</strong> is an international leading institution dedicated to empowering individuals and organizations by providing internationally recognized accreditations and diplomas for various skills, excluding the medical and pharmaceutical fields, registered in 71-75 Shelton Street Covent Garden London WC2H 9JQ United Kingdom by number 15865484. We believe that continuous education and training are the foundations of success and progress, and we are committed to supporting and developing professional and technical skills for all individuals and organizations.
-                </p>
-                <h1 className='text-3xl font-semibold '>
-                    Our Goals:
-                </h1>
-                <p className=''>
+            <div className="min-h-screen px-6 md:px-24 py-10 max-w-5xl mx-auto space-y-10 text-gray-800">
+                <section className="space-y-4">
+                    <p className="text-lg leading-relaxed">
+                        <strong className="text-[#050c45] font-semibold">GAPS Academy</strong> is a UK-registered educational and training institution, committed to empowering individuals through high-quality academic, professional, and technical learning programs.
+                    </p>
+                    <p className="text-lg leading-relaxed">
+                        We proudly operate under UK SIC codes <strong>85320</strong>, <strong>85410</strong>, <strong>85421</strong>, and <strong>85422</strong>, which officially authorize us to provide:
+                    </p>
+                    <ul className="list-disc list-inside pl-2 space-y-1 text-lg text-gray-700">
+                        <li>Technical and Vocational Education</li>
+                        <li>Post-secondary and Pre-university Training</li>
+                        <li>Undergraduate Degree-Level Education</li>
+                        <li>Postgraduate-Level Qualifications</li>
+                    </ul>
+                </section>
 
-                    <strong className='font-semibold'>Empowering Individuals:</strong> We strive to help individuals develop and enhance their professional and technical skills by offering recognized diplomas that improve their job market opportunities.
-                    <br />
-                    <strong>Supporting Organizations:</strong> We aim to empower organizations to improve their employees performance by providing customized accreditation programs that meet changing market needs.
-                    <br />
+                <section className="space-y-4">
+                    <p className="text-lg leading-relaxed">
+                        Founded on the belief that practical skills and accredited learning open doors to global opportunities, GAPS Academy delivers internationally-oriented programs tailored to the needs of professionals, students, and career changers alike.
+                    </p>
+                    <p className="text-lg leading-relaxed">
+                        Our core mission is to bridge the gap between academic theory and practical application, offering recognized diplomas, certifications, and pathways to higher education and employment.
+                    </p>
+                </section>
 
-                    <strong className='font-semibold'>Enhancing Quality:</strong> We are dedicated to delivering the highest quality standards in our training and accreditation programs to ensure that our certificate holders are equipped with the best knowledge and skills.
-                    <br />
+                <section className="space-y-4">
+                    <h2 className="text-3xl font-semibold text-[#050c45]">Our Specializations</h2>
+                    <ul className="list-disc list-inside pl-2 space-y-1 text-lg text-gray-700">
+                        <li>Vocational and professional diplomas</li>
+                        <li>Bachelor’s and Master’s equivalent training programs</li>
+                        <li>Distance and blended learning models</li>
+                    </ul>
+                </section>
 
-                    <strong className='font-semibold'>Global Expansion:</strong> We aim to strengthen our global presence through strategic partnerships with educational and training institutions worldwide.
-                    <br />
-
-                    <strong className='font-semibold'>Promoting Continuous Learning:</strong> We advocate the idea that learning is a continuous process that does not stop at a certain point, contributing to improving the professional and personal life of individuals.
-                </p>
-                <h1 className='text-3xl font-semibold '>
-                    Our Services:
-                </h1>
-                <p className=''>
-                    In addition to providing accreditation and diplomas, we also offer training courses in collaboration with our accredited partners. These courses aim to enhance and develop the technical and professional skills of individuals and organizations, ensuring they meet the changing market demands and increase their chances of success in various fields.
-                    ASB-Academy is committed to transparency and integrity in all its dealings and always strives to provide the best services to our global community. We believe that every individual deserves the opportunity to realize their full potential, and we do our utmost to support this noble goal.
-                </p>
+                <section className="space-y-4">
+                    <p className="text-lg leading-relaxed">
+                        At GAPS, we don’t just teach – we guide, mentor, and empower. Our team of industry experts and educators ensures that every learner receives the tools, support, and accreditation needed to thrive in today’s fast-changing world.
+                    </p>
+                    <p className="text-lg leading-relaxed">
+                        Whether you’re looking to upgrade your career, validate your experience, or start a new educational journey – <strong className="text-[#050c45] font-semibold">GAPS Academy</strong> is your trusted partner in success.
+                    </p>
+                </section>
             </div>
         </>
     )

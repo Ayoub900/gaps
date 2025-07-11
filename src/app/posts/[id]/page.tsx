@@ -45,25 +45,40 @@ export default async function postPage({
     const post = await getpost(id);
     return (
         <>
-            <div className="h-[180px] w-full md:h-[450px] relative">
-                <Image className="object-cover" src={post.imageUrl} fill alt={post.title} />
+            {/* Post Image */}
+            <div className="relative w-full h-[180px] md:h-[450px]">
+                <Image
+                    src={post.imageUrl}
+                    alt={post.title}
+                    fill
+                    className="object-cover"
+                    priority
+                />
             </div>
-            <div className="min-h-screen flex flex-col px-4 md:px-24 relative space-y-4 my-4">
+
+            {/* Content & Form */}
+            <main className="min-h-screen px-4 md:px-24 my-6 space-y-6 relative max-w-4xl mx-auto">
                 <h1 className="text-3xl font-bold text-center">{post.title}</h1>
 
-                <div dangerouslySetInnerHTML={{ __html: post.body }}></div>
-                {success && success === "1" ?
-                    <div className="w-2xl mx-auto py-8 px-4 bg-green-600 text-white text-2xl font-bold">
+                <article
+                    className="prose max-w-full"
+                    dangerouslySetInnerHTML={{ __html: post.body }}
+                />
+
+                {/* Success/Error Messages or Form */}
+                {success === "1" ? (
+                    <div className="bg-green-600 text-white text-2xl font-bold text-center py-6 rounded-md">
                         Your application has been sent successfully!
                     </div>
-                    : (error && error === "1" ?
-                        <div className="w-2xl mx-auto py-8 px-4 bg-red-600 text-white text-2xl font-bold">
-                            Something has gone wrong, please try again later!
-                        </div>
-                        : <Form title={post.title} />
-                    )
-                }
-            </div >
+                ) : error === "1" ? (
+                    <div className="bg-red-600 text-white text-2xl font-bold text-center py-6 rounded-md">
+                        Something has gone wrong, please try again later!
+                    </div>
+                ) : (
+                    <Form title={post.title} />
+                )}
+            </main>
         </>
+
     );
 }

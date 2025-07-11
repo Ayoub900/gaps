@@ -5,7 +5,11 @@ import { getServerSession } from 'next-auth'
 import { authOptions } from '@/app/api/auth/[...nextauth]/auth'
 import { notFound, redirect } from 'next/navigation'
 
-export default async function LPSPage() {
+interface LPSPageProps {
+    searchParams: { page?: string }
+}
+
+export default async function LPSPage({ searchParams }: LPSPageProps) {
     const session = await getServerSession(authOptions)
     const user = session?.user
 
@@ -15,16 +19,19 @@ export default async function LPSPage() {
     }
 
     if (user.role !== "ADMIN" && user.role !== "MANAGER") notFound()
+
+    const page = searchParams.page ? parseInt(searchParams.page) : 1
+
     return (
-        <div className="container mx-auto py-10">
-            <h1 className="text-4xl font-bold mb-8">Landing Page Submissions</h1>
-            <Card>
-                <CardHeader>
-                    <CardTitle>Form Submissions</CardTitle>
+        <div className="container mx-auto py-10 px-4">
+            <h1 className="text-4xl font-bold mb-8 text-[#050c45]">Landing Page Submissions</h1>
+            <Card className="shadow-md">
+                <CardHeader className="border-b border-gray-200">
+                    <CardTitle className="text-xl font-semibold text-[#050c45]">Form Submissions</CardTitle>
                 </CardHeader>
-                <CardContent>
-                    <Suspense fallback={<div>Loading...</div>}>
-                        <LPSList />
+                <CardContent className="p-6">
+                    <Suspense fallback={<div className="text-center py-10 text-gray-500">Loading...</div>}>
+                        <LPSList page={page} />
                     </Suspense>
                 </CardContent>
             </Card>

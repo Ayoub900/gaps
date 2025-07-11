@@ -32,16 +32,37 @@ export default function page({ searchParams: { q } }: PageProps) {
 
     }
     return (
-        <div className='flex flex-col justify-center bg-gray-200 p-4 md:p-24'>
-            <form action={handleSubmit} className='p-4 mx-auto bg-white shadow-lg mb-4 min-w-[300px] w-full max-w-[560px]'>
-                <h1 className='text-3xl font-semibold text-secondery mb-3'>Type your Id to search:</h1>
-                <div className='flex flex-col md:flex-row gap-2 w-full'>
-                    <input className='p-3 border border-gray/70 w-full outline-none' name='q' type="text" required />
-                    <FormSubmitButton>Search</FormSubmitButton>
+        <div className="flex flex-col justify-center items-center min-h-screen bg-[#f4f6fb] px-4 md:px-24 py-12">
+            <form
+                action={handleSubmit}
+                className="bg-white shadow-xl rounded-2xl w-full max-w-[560px] p-6 md:p-10 border border-gray-100"
+            >
+                <h1 className="text-2xl md:text-3xl font-bold text-[#050c45] mb-6">
+                    Verify Your Identity
+                </h1>
+                <p className="text-sm text-gray-600 mb-6">
+                    Enter your ID below to search for your account.
+                </p>
+                <div className="flex flex-col md:flex-row gap-3">
+                    <input
+                        className="flex-1 px-4 py-3 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-[#e49400]"
+                        name="q"
+                        type="text"
+                        placeholder="Enter your ID"
+                        required
+                    />
+                    <FormSubmitButton className="bg-[#e49400] text-white font-semibold px-6 py-3 rounded-lg hover:bg-opacity-90 transition">
+                        Search
+                    </FormSubmitButton>
                 </div>
             </form>
 
-            {q && <PersonCard q={q} />}
+            {q && (
+                <div className="mt-8 w-full max-w-[560px]">
+                    <PersonCard q={q} />
+                </div>
+            )}
         </div>
+
     )
 }

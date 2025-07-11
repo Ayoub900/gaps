@@ -44,42 +44,70 @@ export default function IdForm({ id, isOpen, onClose }: IdFormProps) {
 
     return (
         <Dialog open={isOpen} onOpenChange={onClose}>
-            <DialogContent className="sm:max-w-[425px]">
+            <DialogContent className="sm:max-w-[425px] p-6">
                 <DialogHeader>
-                    <DialogTitle>{id ? 'Edit ID' : 'Create New ID'}</DialogTitle>
+                    <DialogTitle className="text-lg font-semibold text-[#050c45]">
+                        {id ? 'Edit ID' : 'Create New ID'}
+                    </DialogTitle>
                 </DialogHeader>
-                <form onSubmit={handleSubmit} className="space-y-4">
-                    <div>
+                <form onSubmit={handleSubmit} className="space-y-5">
+                    <div className="flex flex-col space-y-1">
                         <Label htmlFor="name">Name</Label>
-                        <Input id="name" name="name" defaultValue={id?.name || ''} />
+                        <Input
+                            id="name"
+                            name="name"
+                            defaultValue={id?.name || ''}
+                            className="w-full !ring-[#e49400] focus:ring-2"
+                        />
                     </div>
-                    <div>
+                    <div className="flex flex-col space-y-1">
                         <Label htmlFor="code">Code</Label>
-                        <Input id="code" name="code" defaultValue={id?.code || ''} />
+                        <Input
+                            id="code"
+                            name="code"
+                            defaultValue={id?.code || ''}
+                            className="w-full !ring-[#e49400] focus:ring-2"
+                        />
                     </div>
-                    <div>
+                    <div className="flex flex-col space-y-1">
                         <Label htmlFor="cin">CIN</Label>
-                        <Input id="cin" name="cin" defaultValue={id?.cin || ''} />
+                        <Input
+                            id="cin"
+                            name="cin"
+                            defaultValue={id?.cin || ''}
+                            className="w-full !ring-[#e49400] focus:ring-2"
+                        />
                     </div>
-                    <div>
+                    <div className="flex flex-col space-y-1">
                         <Label htmlFor="diploma">Diploma</Label>
-                        <Input id="diploma" name="diploma" defaultValue={id?.diploma || ''} />
+                        <Input
+                            id="diploma"
+                            name="diploma"
+                            defaultValue={id?.diploma || ''}
+                            className="w-full !ring-[#e49400] focus:ring-2"
+                        />
                     </div>
-                    <div>
+                    <div className="flex flex-col space-y-1">
                         <Label htmlFor="type">Type</Label>
-                        <Input id="type" name="type" defaultValue={id?.type || 'EDU'} />
+                        <Input
+                            id="type"
+                            name="type"
+                            defaultValue={id?.type || 'EDU'}
+                            className="w-full !ring-[#e49400] focus:ring-2"
+                        />
                     </div>
 
-                    <DialogFooter>
-                        <Button type="button" variant="outline" onClick={onClose}>
+                    <DialogFooter className="flex justify-end space-x-3 pt-4">
+                        <Button type="button" className='border border-gray-300 text-gray-700 hover:bg-gray-100' variant="outline" onClick={onClose}>
                             Cancel
                         </Button>
-                        <Button type="submit" disabled={isLoading}>
-                            {isLoading ? 'Submitting...' : (id ? 'Update' : 'Create')}
+                        <Button type="submit" disabled={isLoading} className="bg-[#e49400] text-white hover:bg-amber-600">
+                            {isLoading ? 'Submitting...' : id ? 'Update' : 'Create'}
                         </Button>
                     </DialogFooter>
                 </form>
             </DialogContent>
         </Dialog>
+
     )
 }

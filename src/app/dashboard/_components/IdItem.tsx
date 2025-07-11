@@ -18,31 +18,31 @@ export default function IdItem({ id }: { id: Id }) {
     }
 
     return (
-        <Card className="overflow-hidden">
-            <CardContent className="grid grid-cols-2 gap-4 p-6">
+        <Card className="overflow-hidden rounded-lg border border-gray-200 shadow-sm">
+            <CardContent className="grid grid-cols-2 gap-6 p-6">
                 <div>
-                    <p className="text-sm font-medium text-gray-500">Name</p>
-                    <p className="text-lg font-semibold">{id.name || 'N/A'}</p>
+                    <p className="text-sm font-medium text-[#6b7280]">Name</p>
+                    <p className="text-lg font-semibold text-[#050c45]">{id.name || 'N/A'}</p>
                 </div>
                 <div>
-                    <p className="text-sm font-medium text-gray-500">Code</p>
-                    <p className="text-lg font-semibold">{id.code || 'N/A'}</p>
+                    <p className="text-sm font-medium text-[#6b7280]">Code</p>
+                    <p className="text-lg font-semibold text-[#050c45]">{id.code || 'N/A'}</p>
                 </div>
                 <div>
-                    <p className="text-sm font-medium text-gray-500">CIN</p>
-                    <p className="text-lg font-semibold">{id.cin || 'N/A'}</p>
+                    <p className="text-sm font-medium text-[#6b7280]">CIN</p>
+                    <p className="text-lg font-semibold text-[#050c45]">{id.cin || 'N/A'}</p>
                 </div>
                 <div>
-                    <p className="text-sm font-medium text-gray-500">Diploma</p>
-                    <p className="text-lg font-semibold">{id.diploma || 'N/A'}</p>
+                    <p className="text-sm font-medium text-[#6b7280]">Diploma</p>
+                    <p className="text-lg font-semibold text-[#050c45]">{id.diploma || 'N/A'}</p>
                 </div>
                 <div>
-                    <p className="text-sm font-medium text-gray-500">Type</p>
-                    <p className="text-lg font-semibold">{id.type || 'N/A'}</p>
+                    <p className="text-sm font-medium text-[#6b7280]">Type</p>
+                    <p className="text-lg font-semibold text-[#050c45]">{id.type || 'N/A'}</p>
                 </div>
                 <div>
-                    <p className="text-sm font-medium text-gray-500">Created At</p>
-                    <p className="text-lg font-semibold">{id.createdAt.toLocaleDateString()}</p>
+                    <p className="text-sm font-medium text-[#6b7280]">Created At</p>
+                    <p className="text-lg font-semibold text-[#050c45]">{id.createdAt.toLocaleDateString()}</p>
                 </div>
             </CardContent>
             <CardFooter className="flex justify-end space-x-2 bg-gray-50 p-6">

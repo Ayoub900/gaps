@@ -1,31 +1,72 @@
-import React from 'react'
-import Image from 'next/image'
-import Link from 'next/link'
+import React from "react"
+import Image from "next/image"
+import Link from "next/link"
 
 export default function Footer() {
     return (
-        <>
-            <div className='min-h-[50vh] gap-4 justify-around p-4 md:px-24 md:py-12 flex flex-col md:flex-row bg-[#050c45]'>
-                <div className='flex flex-col justify-center items-center'>
-                    <Image src={'/logo_gaps8.png'} width={200} height={200} alt='logo' />
-                    <h1 className="text-4xl font-semibold text-white">Global Academy of Professional Skills</h1>
-                    <p className='text-white/70 text-center '> academygaps@gmail.com
-                    </p>
+        <footer className="bg-[#050c45] text-white">
+            <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-around items-center gap-10 p-8 md:py-16">
+                {/* Logo & Contact */}
+                <div className="flex flex-col items-center text-center max-w-sm">
+                    <Image
+                        src="/logo_gaps8.png"
+                        alt="GAPS Logo"
+                        width={180}
+                        height={180}
+                        className="mb-4"
+                        priority
+                    />
+                    <h2 className="text-3xl font-semibold mb-2">
+                        Global Academy of Professional Skills
+                    </h2>
+                    <a
+                        href="mailto:academygaps@gmail.com"
+                        className="text-white/70 hover:text-[#e49400] transition"
+                    >
+                        academygaps@gmail.com
+                    </a>
                 </div>
-                <div className='flex flex-col justify-center '>
-                    <h1 className="text-2xl font-semibold text-white mb-2">Usefull links</h1>
-                    <div className='px-4 flex flex-col'>
-                        <Link className='text-white/70 underline p-2' href={'/'}>Home</Link>
-                        <Link className='text-white/70 underline p-2' href={'/about'}>About Us</Link>
-                        <Link className='text-white/70 underline p-2' href={'/posts/686a566d0cb9966c44354e0b'}>Certification</Link>
-                        <Link className='text-white/70 underline p-2' href={'/international-diploma'}>International Diploma</Link>
-                        <Link className='text-white/70 underline p-2' href={'/verification'}>Verification</Link>
-                    </div>
-                </div>
+
+                {/* Useful Links */}
+                <nav className="flex flex-col gap-3 text-center md:text-left">
+                    <h3 className="text-2xl font-semibold mb-3">Useful Links</h3>
+                    <Link
+                        href="/"
+                        className="text-white/70 hover:text-[#e49400] underline transition px-2 py-1 rounded"
+                    >
+                        Home
+                    </Link>
+                    <Link
+                        href="/about"
+                        className="text-white/70 hover:text-[#e49400] underline transition px-2 py-1 rounded"
+                    >
+                        About Us
+                    </Link>
+                    <Link
+                        href="/posts/686a566d0cb9966c44354e0b"
+                        className="text-white/70 hover:text-[#e49400] underline transition px-2 py-1 rounded"
+                    >
+                        Certification
+                    </Link>
+                    <Link
+                        href="/international-diploma"
+                        className="text-white/70 hover:text-[#e49400] underline transition px-2 py-1 rounded"
+                    >
+                        International Diploma
+                    </Link>
+                    <Link
+                        href="/verification"
+                        className="text-white/70 hover:text-[#e49400] underline transition px-2 py-1 rounded"
+                    >
+                        Verification
+                    </Link>
+                </nav>
             </div>
-            <div className='flex justify-center bg-blue-950 p-4'>
-                <p className='text-white/80 '>&copy; 2025 GAPS. All rights Reserved.</p>
+
+            {/* Bottom copyright */}
+            <div className="bg-blue-950 py-4 text-center text-white/80 text-sm">
+                &copy; 2025 GAPS. All rights reserved.
             </div>
-        </>
+        </footer>
     )
 }
