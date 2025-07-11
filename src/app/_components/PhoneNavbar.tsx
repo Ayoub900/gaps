@@ -56,6 +56,9 @@ export default function PhoneNavbar() {
                 <Link href="/about" className="text-black font-semibold text-lg hover:text-[#e49400]" onClick={toggleMenu}>
                     About Us
                 </Link>
+                <Link href="/contact" className="text-black font-semibold text-lg hover:text-[#e49400]" onClick={toggleMenu}>
+                    Contact Us
+                </Link>
             </nav>
         </>
     )

@@ -44,7 +44,7 @@ export default function IdForm({ id, isOpen, onClose }: IdFormProps) {
 
     return (
         <Dialog open={isOpen} onOpenChange={onClose}>
-            <DialogContent className="sm:max-w-[425px] p-6">
+            <DialogContent className="sm:max-w-[425px] rounded-lg p-4">
                 <DialogHeader>
                     <DialogTitle className="text-lg font-semibold text-[#050c45]">
                         {id ? 'Edit ID' : 'Create New ID'}
@@ -97,7 +97,7 @@ export default function IdForm({ id, isOpen, onClose }: IdFormProps) {
                         />
                     </div>
 
-                    <DialogFooter className="flex justify-end space-x-3 pt-4">
+                    <DialogFooter className="flex justify-end space-y-2 md:space-x-3 pt-4">
                         <Button type="button" className='border border-gray-300 text-gray-700 hover:bg-gray-100' variant="outline" onClick={onClose}>
                             Cancel
                         </Button>

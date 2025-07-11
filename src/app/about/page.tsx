@@ -4,7 +4,7 @@ export default function AboutPage() {
     return (
         <>
             <div className="flex min-h-[220px] flex-col items-center justify-center bg-[#050c45] px-6 md:px-24 relative">
-                <h1 className="text-5xl font-semibold text-white/95 mb-2">About Us – GAPS Academy</h1>
+                <h1 className="text-5xl font-semibold text-white/95 mb-2">About Us</h1>
                 <p className="text-white/80 text-lg text-center max-w-3xl">
                     Empowering individuals through accredited, practical, and global education.
                 </p>

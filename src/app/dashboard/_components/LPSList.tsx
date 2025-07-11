@@ -30,7 +30,7 @@ export default async function LPSList({ page = 1 }: Props) {
                     {applications.map((application) => (
                         <TableRow key={application.id} className="even:bg-gray-50">
                             <TableCell className="px-4 py-2 text-sm text-gray-700">{application.name}</TableCell>
-                            <TableCell className="px-4 py-2 text-sm text-gray-700">{application.title}</TableCell>
+                            <TableCell className={`px-4 py-2 text-sm ${application.title === 'Contact Us Page' && 'bg-green-500/60 '} `}>{application.title}</TableCell>
                             <TableCell className="px-4 py-2 text-sm text-gray-700">{application.phone}</TableCell>
                             <TableCell className="px-4 py-2 text-sm text-gray-700">{application.country}</TableCell>
                             <TableCell className="px-4 py-2 text-sm text-gray-700">{application.createdAt.toLocaleString()}</TableCell>

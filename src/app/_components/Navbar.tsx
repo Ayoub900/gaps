@@ -30,6 +30,7 @@ export default function Navbar() {
                     <Link href="/international-diploma" className="p-4 hover:text-[#e49400] transition duration-300">International Diploma</Link>
                     <Link href="/verification" className="p-4 hover:text-[#e49400] transition duration-300">Verification</Link>
                     <Link href="/about" className="p-4 hover:text-[#e49400] transition duration-300">About Us</Link>
+                    <Link href="/contact" className="p-4 hover:text-[#e49400] transition duration-300">Contact Us</Link>
                 </div>
             </nav>
 
