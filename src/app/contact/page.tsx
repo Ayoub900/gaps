@@ -16,7 +16,7 @@ export default function ContactPage({ searchParams }: { searchParams: { success?
             <section className="min-h-screen px-12 md:px-24 py-16 bg-white">
                 <div className="grid md:grid-cols-2 gap-12 items-start">
                     {/* Contact Info */}
-                    <div className="space-y-8">
+                    <div className="space-y-8 mt-6">
                         <div>
                             <h2 className="text-2xl font-semibold text-[#050c45] mb-2">Email</h2>
                             <p className="text-gray-700 text-lg">

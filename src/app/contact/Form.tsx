@@ -48,7 +48,7 @@ export default function Form({ title }: { title: string }) {
     return (
         <form
             action={handleSubmit}
-            className="w-full max-w-2xl mx-auto bg-white rounded-xl shadow-sm space-y-6"
+            className="w-full max-w-2xl mx-auto bg-white rounded-xl space-y-6"
         >
             <div className="flex flex-col">
                 <label htmlFor="name" className="text-sm font-semibold text-[#050c45] mb-1">
@@ -106,7 +106,7 @@ export default function Form({ title }: { title: string }) {
                 />
             </div>
 
-            <FormSubmitButton>Apply</FormSubmitButton>
+            <FormSubmitButton>Send</FormSubmitButton>
         </form>
 
     )
