@@ -130,6 +130,13 @@ export default async function Home() {
             alt="IT Partner"
             className="object-contain rounded-lg bg-white shadow-sm hover:shadow-md transition"
           />
+          <Image
+            src="/need_formation.jpeg"
+            width={160}
+            height={160}
+            alt="Need Formation Partner"
+            className="object-contain rounded-lg bg-white shadow-sm hover:shadow-md transition"
+          />
         </div>
       </div>
 

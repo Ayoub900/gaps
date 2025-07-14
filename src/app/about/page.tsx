@@ -32,7 +32,7 @@ export default function AboutPage() {
 
                 <section className="space-y-4">
                     <p className="text-lg leading-relaxed">
-                        Founded on the belief that practical skills and accredited learning open doors to global opportunities, GAPS Academy delivers internationally-oriented programs tailored to the needs of professionals, students, and career changers alike.
+                        Founded on the belief that practical skills and accredited learning open doors to global opportunities, <strong className="text-[#050c45] font-semibold">GLOBAL ACADEMY OF PROFESSIONAL SKILLS LTD</strong> delivers internationally-oriented programs tailored to the needs of professionals, students, and career changers alike.
                     </p>
                     <p className="text-lg leading-relaxed">
                         Our core mission is to bridge the gap between academic theory and practical application, offering recognized diplomas, certifications, and pathways to higher education and employment.
@@ -50,12 +50,16 @@ export default function AboutPage() {
 
                 <section className="space-y-4">
                     <p className="text-lg leading-relaxed">
-                        At GAPS, we don’t just teach – we guide, mentor, and empower. Our team of industry experts and educators ensures that every learner receives the tools, support, and accreditation needed to thrive in today’s fast-changing world.
+                        At <strong className="text-[#050c45] font-semibold">GLOBAL ACADEMY OF PROFESSIONAL SKILLS LTD</strong>, we don’t just teach – we guide, mentor, and empower. Our team of industry experts and educators ensures that every learner receives the tools, support, and accreditation needed to thrive in today’s fast-changing world.
                     </p>
                     <p className="text-lg leading-relaxed">
-                        Whether you’re looking to upgrade your career, validate your experience, or start a new educational journey – <strong className="text-[#050c45] font-semibold">GAPS Academy</strong> is your trusted partner in success.
+                        At <strong className="text-[#050c45] font-semibold">GLOBAL ACADEMY OF PROFESSIONAL SKILLS LTD</strong>, we believe that quality is the foundation of excellence in education. That’s why we are committed to aligning with internationally recognized standards, including <strong>ISO 21001</strong> for Educational Organizations Management, <strong>ISO 9001</strong> for overall Quality Management, and <strong>ISO/IEC 40180</strong> for e-Learning Quality. Our goal is to obtain these certifications to ensure a modern, effective, and secure learning experience that meets the highest expectations of our students and their families.
+                    </p>
+                    <p className="text-lg leading-relaxed">
+                        Whether you’re looking to upgrade your career, validate your experience, or start a new educational journey – <strong className="text-[#050c45] font-semibold">GLOBAL ACADEMY OF PROFESSIONAL SKILLS LTD</strong> is your trusted partner in success.
                     </p>
                 </section>
+
             </div>
         </>
     )
