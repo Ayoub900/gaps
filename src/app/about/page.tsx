@@ -13,11 +13,15 @@ export default function AboutPage() {
             <div className="min-h-screen px-6 md:px-24 py-10 max-w-5xl mx-auto space-y-10 text-gray-800">
                 <section className="space-y-4">
                     <p className="text-lg leading-relaxed">
-                        <strong className="text-[#050c45] font-semibold">GAPS Academy</strong> is a UK-registered educational and training institution, committed to empowering individuals through high-quality academic, professional, and technical learning programs.
+                        <strong className="text-[#050c45] font-semibold">GLOBAL ACADEMY OF PROFESSIONAL SKILLS LTD</strong> is a UK-registered educational and training institution, committed to empowering individuals through high-quality academic, professional, and technical learning programs.
                     </p>
                     <p className="text-lg leading-relaxed">
-                        We proudly operate under UK SIC codes <strong>85320</strong>, <strong>85410</strong>, <strong>85421</strong>, and <strong>85422</strong>, which officially authorize us to provide:
+                        We proudly operate under UK SIC codes <strong>85320</strong>, <strong>85410</strong>, <strong>85421</strong>, and <strong>85422</strong>, which officially authorize us to provide a wide range of educational and professional development services.
                     </p>
+                    <p className="text-lg leading-relaxed">
+                        Company Number: <strong>16579137</strong> &nbsp;|&nbsp; Incorporated: <strong>14 July 2025</strong> &nbsp;|&nbsp; Registered Email: <strong>Academygaps@gmail.com</strong> &nbsp;|&nbsp; Registered Office: <strong>71–75 Shelton Street, Covent Garden, London WC2H 9JQ, United Kingdom</strong>
+                    </p>
+
                     <ul className="list-disc list-inside pl-2 space-y-1 text-lg text-gray-700">
                         <li>Technical and Vocational Education</li>
                         <li>Post-secondary and Pre-university Training</li>
