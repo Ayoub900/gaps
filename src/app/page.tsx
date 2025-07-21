@@ -137,6 +137,20 @@ export default async function Home() {
             alt="Need Formation Partner"
             className="object-contain rounded-lg bg-white shadow-sm hover:shadow-md transition"
           />
+          <Image
+            src="/newmaxdev.jpeg"
+            width={160}
+            height={160}
+            alt="New Max Dev Partner"
+            className="object-contain rounded-lg bg-white shadow-sm hover:shadow-md transition"
+          />
+          <Image
+            src="/onlessonpro.jpeg"
+            width={160}
+            height={160}
+            alt="On Lesson Pro Partner"
+            className="object-contain rounded-lg bg-white shadow-sm hover:shadow-md transition"
+          />
         </div>
       </div>
 
