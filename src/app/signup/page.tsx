@@ -41,7 +41,7 @@ async function SignUp({ callbackUrl }: SignupProps) {
     return (
         <Card className="w-full md:w-[500px] mx-4 md:mx-auto my-12">
             <CardHeader>
-                <CardTitle>Signup</CardTitle>
+                <CardTitle>Signup:</CardTitle>
                 <CardDescription>Create a free account by submiting the form</CardDescription>
             </CardHeader>
             <CardContent>
