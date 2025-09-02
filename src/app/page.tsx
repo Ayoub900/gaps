@@ -151,6 +151,13 @@ export default async function Home() {
             alt="On Lesson Pro Partner"
             className="object-contain rounded-lg bg-white shadow-sm hover:shadow-md transition"
           />
+          <Image
+            src="/damej-print.png"
+            width={160}
+            height={160}
+            alt="Damej Print Partner"
+            className="object-contain rounded-lg bg-white shadow-sm hover:shadow-md transition"
+          />
         </div>
       </div>
 
