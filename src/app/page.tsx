@@ -121,42 +121,49 @@ export default async function Home() {
             width={160}
             height={160}
             alt="ASBA Partner"
-            className="object-contain rounded-lg bg-white shadow-sm hover:shadow-md transition"
+            className="object-contain rounded-lg bg-white"
           />
           <Image
             src="/logo_it.png"
             width={160}
             height={160}
             alt="IT Partner"
-            className="object-contain rounded-lg bg-white shadow-sm hover:shadow-md transition"
+            className="object-contain rounded-lg bg-white"
           />
           <Image
             src="/need_formation.jpeg"
             width={160}
             height={160}
             alt="Need Formation Partner"
-            className="object-contain rounded-lg bg-white shadow-sm hover:shadow-md transition"
+            className="object-contain rounded-lg bg-white"
           />
           <Image
             src="/newmaxdev.jpeg"
             width={160}
             height={160}
             alt="New Max Dev Partner"
-            className="object-contain rounded-lg bg-white shadow-sm hover:shadow-md transition"
+            className="object-contain rounded-lg bg-white"
           />
           <Image
             src="/onlessonpro.jpeg"
             width={160}
             height={160}
             alt="On Lesson Pro Partner"
-            className="object-contain rounded-lg bg-white shadow-sm hover:shadow-md transition"
+            className="object-contain rounded-lg bg-white"
           />
           <Image
             src="/damej-print.png"
             width={160}
             height={160}
             alt="Damej Print Partner"
-            className="object-contain rounded-lg bg-white shadow-sm hover:shadow-md transition"
+            className="object-contain rounded-lg bg-white"
+          />
+          <Image
+            src="/logo_innova.png"
+            width={260}
+            height={260}
+            alt="Damej Print Partner"
+            className="object-contain rounded-lg bg-white"
           />
         </div>
       </div>

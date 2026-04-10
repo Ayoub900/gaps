@@ -48,9 +48,10 @@ export default function page({ searchParams: { success, error } }: PageProps) {
                     <li>Digital Commerce & Marketing</li>
                     <li>Technical and Service Professions</li>
                     <li>Sports Professions</li>
-                    <li>Private Security</li>
-                    <li>Social Media Professions</li>
-                    <li>Photography</li>
+                    <li>Health & Safety Management</li>
+                    <li>Automobile Diagnosis</li>
+                    <li>Fashion Stylist And Model Making</li>
+                    <li>Mobile Phone Repair And Maintenance</li>
                     <li>English, French, Spanish, German, Dutch, Chinese Languages</li>
                 </ul>
 
