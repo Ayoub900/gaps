@@ -47,8 +47,18 @@ export default function Footer() {
             </div>
 
             {/* Footer bottom */}
-            <div className="bg-blue-950 py-4 text-center text-white/80 text-sm">
-                &copy; 2025 GAPS. All rights reserved.
+            <div className="bg-blue-950 px-4 py-4 text-center text-sm text-white/80">
+                <p>
+                    &copy; 2025 GAPS. All rights reserved. Designed by{" "}
+                    <a
+                        href="https://www.sentinelstudio.ma"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="font-semibold text-white hover:text-[#e49400] transition"
+                    >
+                        Sentinel Studio
+                    </a>
+                </p>
             </div>
         </footer>
     )

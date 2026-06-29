@@ -1,8 +1,7 @@
 import { Metadata } from "next";
 import Image from "next/image";
-import { notFound, redirect } from "next/navigation";
+import { notFound } from "next/navigation";
 import { cache } from "react";
-import Link from "next/link";
 import { db } from "@/lib/db/prisma";
 import Form from "./Form";
 
@@ -56,27 +55,37 @@ export default async function postPage({
                 />
             </div>
 
-            {/* Content & Form */}
-            <main className="min-h-screen px-4 md:px-24 my-6 space-y-6 relative max-w-4xl mx-auto">
-                <h1 className="text-3xl font-bold text-center">{post.title}</h1>
+            <main className="min-h-screen bg-white px-4 py-12 md:px-24">
+                <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[1fr_380px] lg:items-start">
+                    <section className="max-w-3xl">
+                        <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#e49400]">GAPS Program</p>
+                        <h1 className="mt-3 text-3xl font-extrabold leading-tight text-[#050c45] md:text-4xl">{post.title}</h1>
 
-                <article
-                    className="prose max-w-full"
-                    dangerouslySetInnerHTML={{ __html: post.body }}
-                />
+                        <article
+                            className="mt-8 text-lg leading-8 text-[#050c45] [&_h2]:mb-4 [&_h2]:mt-8 [&_h2]:text-2xl [&_h2]:font-bold [&_p]:mb-5 [&_ul]:my-5 [&_ul]:list-disc [&_ul]:pl-6 [&_li]:mb-2"
+                            dangerouslySetInnerHTML={{ __html: post.body }}
+                        />
+                    </section>
 
-                {/* Success/Error Messages or Form */}
-                {success === "1" ? (
-                    <div className="bg-green-600 text-white text-2xl font-bold text-center py-6 rounded-md">
-                        Your application has been sent successfully!
-                    </div>
-                ) : error === "1" ? (
-                    <div className="bg-red-600 text-white text-2xl font-bold text-center py-6 rounded-md">
-                        Something has gone wrong, please try again later!
-                    </div>
-                ) : (
-                    <Form title={post.title} />
-                )}
+                    <aside className="rounded-lg border border-[#050c45]/10 bg-[#f8fafc] p-5 shadow-sm lg:sticky lg:top-6">
+                        <div className="mb-5 border-b border-gray-200 pb-4">
+                            <h2 className="text-xl font-bold text-[#050c45]">Apply for this program</h2>
+                            <p className="mt-1 text-sm leading-6 text-gray-600">Send your details and our team will contact you.</p>
+                        </div>
+
+                        {success === "1" ? (
+                            <div className="rounded-md bg-green-600 px-5 py-4 text-center text-lg font-bold text-white">
+                                Your application has been sent successfully!
+                            </div>
+                        ) : error === "1" ? (
+                            <div className="rounded-md bg-red-600 px-5 py-4 text-center text-lg font-bold text-white">
+                                Something has gone wrong, please try again later!
+                            </div>
+                        ) : (
+                            <Form title={post.title} />
+                        )}
+                    </aside>
+                </div>
             </main>
         </>
 

@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import Image from 'next/image'
+import { useRouter } from 'next/navigation'
 import { id as Id } from '@prisma/client'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardFooter } from '@/components/ui/card'
@@ -12,9 +12,11 @@ import DeleteConfirmationDialog from './DeleteConfirmationDialog'
 export default function IdItem({ id }: { id: Id }) {
     const [isEditing, setIsEditing] = useState(false)
     const [isDeleting, setIsDeleting] = useState(false)
+    const router = useRouter()
 
     const handleDelete = async () => {
         await deleteId(id.id)
+        router.refresh()
     }
 
     return (
@@ -46,8 +48,8 @@ export default function IdItem({ id }: { id: Id }) {
                 </div>
             </CardContent>
             <CardFooter className="flex justify-end space-x-2 bg-gray-50 p-6">
-                <Button className='bg-[#050c45] hover:bg-blue-900' onClick={() => setIsEditing(true)}>Edit</Button>
-                <Button variant="destructive" onClick={() => setIsDeleting(true)}>Delete</Button>
+                <Button type="button" className='bg-[#050c45] hover:bg-blue-900' onClick={() => setIsEditing(true)}>Edit</Button>
+                <Button type="button" variant="destructive" onClick={() => setIsDeleting(true)}>Delete</Button>
             </CardFooter>
             <IdForm id={id} isOpen={isEditing} onClose={() => setIsEditing(false)} />
             <DeleteConfirmationDialog
@@ -55,6 +57,7 @@ export default function IdItem({ id }: { id: Id }) {
                 onClose={() => setIsDeleting(false)}
                 onConfirm={handleDelete}
                 itemName={id.name || 'this ID'}
+                resourceLabel="ID"
             />
         </Card>
     )

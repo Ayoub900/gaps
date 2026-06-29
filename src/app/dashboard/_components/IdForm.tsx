@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { useRouter } from 'next/navigation'
 import { id as Id } from '@prisma/client'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
@@ -22,10 +23,13 @@ interface IdFormProps {
 
 export default function IdForm({ id, isOpen, onClose }: IdFormProps) {
     const [isLoading, setIsLoading] = useState(false)
+    const [error, setError] = useState('')
+    const router = useRouter()
 
     const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault()
         setIsLoading(true)
+        setError('')
         const formData = new FormData(event.currentTarget)
 
         try {
@@ -35,8 +39,10 @@ export default function IdForm({ id, isOpen, onClose }: IdFormProps) {
                 await createId(formData)
             }
             onClose()
+            router.refresh()
         } catch (error) {
             console.error('Error submitting form:', error)
+            setError(error instanceof Error ? error.message : 'Unable to save ID.')
         } finally {
             setIsLoading(false)
         }
@@ -96,6 +102,8 @@ export default function IdForm({ id, isOpen, onClose }: IdFormProps) {
                             className="w-full !ring-[#e49400] focus:ring-2"
                         />
                     </div>
+
+                    {error ? <p className="text-sm font-medium text-red-600">{error}</p> : null}
 
                     <DialogFooter className="flex md:justify-end gap-3 md:gap-0 space-x-3 pt-4">
                         <Button type="button" className='border border-gray-300 text-gray-700 hover:bg-gray-100' variant="outline" onClick={onClose}>

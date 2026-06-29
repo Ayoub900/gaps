@@ -48,7 +48,7 @@ export default function Form({ title }: { title: string }) {
     return (
         <form
             action={handleSubmit}
-            className="w-full max-w-2xl mx-auto bg-white rounded-xl space-y-6"
+            className="w-full max-w-2xl mx-auto bg-white rounded-xl space-y-5"
         >
             <div className="flex flex-col">
                 <label htmlFor="name" className="text-sm font-semibold text-[#050c45] mb-1">
@@ -60,7 +60,7 @@ export default function Form({ title }: { title: string }) {
                     type="text"
                     required
                     placeholder="Your full name"
-                    className="p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#e49400]"
+                    className="h-12 rounded-md border border-gray-300 bg-white px-4 text-base outline-none transition placeholder:text-gray-400 focus:border-[#e49400] focus:ring-2 focus:ring-[#e49400]/20"
                 />
             </div>
 
@@ -74,7 +74,7 @@ export default function Form({ title }: { title: string }) {
                     type="text"
                     required
                     placeholder="Your country"
-                    className="p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#e49400]"
+                    className="h-12 rounded-md border border-gray-300 bg-white px-4 text-base outline-none transition placeholder:text-gray-400 focus:border-[#e49400] focus:ring-2 focus:ring-[#e49400]/20"
                 />
             </div>
 
@@ -88,7 +88,7 @@ export default function Form({ title }: { title: string }) {
                     type="tel"
                     required
                     placeholder="Your phone number"
-                    className="p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#e49400]"
+                    className="h-12 rounded-md border border-gray-300 bg-white px-4 text-base outline-none transition placeholder:text-gray-400 focus:border-[#e49400] focus:ring-2 focus:ring-[#e49400]/20"
                 />
             </div>
 
@@ -102,11 +102,11 @@ export default function Form({ title }: { title: string }) {
                     type="email"
                     required
                     placeholder="Your email address"
-                    className="p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#e49400]"
+                    className="h-12 rounded-md border border-gray-300 bg-white px-4 text-base outline-none transition placeholder:text-gray-400 focus:border-[#e49400] focus:ring-2 focus:ring-[#e49400]/20"
                 />
             </div>
 
-            <FormSubmitButton>Send</FormSubmitButton>
+            <FormSubmitButton className="h-12 w-full rounded-md text-base font-semibold">Send</FormSubmitButton>
         </form>
 
     )

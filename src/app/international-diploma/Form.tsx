@@ -48,57 +48,57 @@ export default function Form({ title }: { title: string }) {
     return (
         <form
             action={handleSubmit}
-            className="flex w-full max-w-2xl mx-auto flex-col space-y-6"
+            className="flex w-full max-w-2xl mx-auto flex-col space-y-5 rounded-lg border border-[#050c45]/10 bg-white p-6 shadow-sm"
         >
-            <label htmlFor="name" className="flex flex-col font-medium text-gray-700">
-                Full Name:
+            <label htmlFor="name" className="flex flex-col gap-2 text-sm font-semibold text-[#050c45]">
+                Full Name
                 <input
                     id="name"
                     name="name"
                     type="text"
                     required
                     placeholder="Your full name"
-                    className="p-3 border border-gray-400 rounded-md focus:outline-none focus:ring-2 focus:ring-[#e49400]"
+                    className="h-12 rounded-md border border-gray-300 bg-white px-4 text-base font-normal text-gray-900 outline-none transition placeholder:text-gray-400 focus:border-[#e49400] focus:ring-2 focus:ring-[#e49400]/20"
                 />
             </label>
 
-            <label htmlFor="country" className="flex flex-col font-medium text-gray-700">
-                Country:
+            <label htmlFor="country" className="flex flex-col gap-2 text-sm font-semibold text-[#050c45]">
+                Country
                 <input
                     id="country"
                     name="country"
                     type="text"
                     required
                     placeholder="Your country"
-                    className="p-3 border border-gray-400 rounded-md focus:outline-none focus:ring-2 focus:ring-[#e49400]"
+                    className="h-12 rounded-md border border-gray-300 bg-white px-4 text-base font-normal text-gray-900 outline-none transition placeholder:text-gray-400 focus:border-[#e49400] focus:ring-2 focus:ring-[#e49400]/20"
                 />
             </label>
 
-            <label htmlFor="phone" className="flex flex-col font-medium text-gray-700">
-                Phone:
+            <label htmlFor="phone" className="flex flex-col gap-2 text-sm font-semibold text-[#050c45]">
+                Phone
                 <input
                     id="phone"
                     name="phone"
                     type="tel"
                     required
                     placeholder="Your phone number"
-                    className="p-3 border border-gray-400 rounded-md focus:outline-none focus:ring-2 focus:ring-[#e49400]"
+                    className="h-12 rounded-md border border-gray-300 bg-white px-4 text-base font-normal text-gray-900 outline-none transition placeholder:text-gray-400 focus:border-[#e49400] focus:ring-2 focus:ring-[#e49400]/20"
                 />
             </label>
 
-            <label htmlFor="email" className="flex flex-col font-medium text-gray-700">
-                Email:
+            <label htmlFor="email" className="flex flex-col gap-2 text-sm font-semibold text-[#050c45]">
+                Email
                 <input
                     id="email"
                     name="email"
                     type="email"
                     required
                     placeholder="Your email address"
-                    className="p-3 border border-gray-400 rounded-md focus:outline-none focus:ring-2 focus:ring-[#e49400]"
+                    className="h-12 rounded-md border border-gray-300 bg-white px-4 text-base font-normal text-gray-900 outline-none transition placeholder:text-gray-400 focus:border-[#e49400] focus:ring-2 focus:ring-[#e49400]/20"
                 />
             </label>
 
-            <FormSubmitButton>Apply</FormSubmitButton>
+            <FormSubmitButton className="h-12 rounded-md text-base font-semibold">Apply</FormSubmitButton>
         </form>
 
     )

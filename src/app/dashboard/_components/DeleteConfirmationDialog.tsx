@@ -1,3 +1,6 @@
+'use client'
+
+import { useState, type MouseEvent } from 'react'
 import {
     AlertDialog,
     AlertDialogAction,
@@ -12,8 +15,9 @@ import {
 interface DeleteConfirmationDialogProps {
     isOpen: boolean
     onClose: () => void
-    onConfirm: () => void
+    onConfirm: () => void | Promise<void>
     itemName: string
+    resourceLabel?: string
 }
 
 export default function DeleteConfirmationDialog({
@@ -21,10 +25,24 @@ export default function DeleteConfirmationDialog({
     onClose,
     onConfirm,
     itemName,
+    resourceLabel = 'item',
 }: DeleteConfirmationDialogProps) {
-    const handleConfirm = () => {
-        onConfirm()
-        onClose()
+    const [isDeleting, setIsDeleting] = useState(false)
+    const [error, setError] = useState('')
+
+    const handleConfirm = async (event: MouseEvent<HTMLButtonElement>) => {
+        event.preventDefault()
+        setIsDeleting(true)
+        setError('')
+
+        try {
+            await onConfirm()
+            onClose()
+        } catch (confirmError) {
+            setError(confirmError instanceof Error ? confirmError.message : `Unable to delete this ${resourceLabel}.`)
+        } finally {
+            setIsDeleting(false)
+        }
     }
 
     return (
@@ -33,12 +51,15 @@ export default function DeleteConfirmationDialog({
                 <AlertDialogHeader>
                     <AlertDialogTitle>Are you sure you want to delete {itemName}?</AlertDialogTitle>
                     <AlertDialogDescription>
-                        This action cannot be undone. This will permanently delete the ID from the database.
+                        This action cannot be undone. This will permanently delete the {resourceLabel} from the database.
                     </AlertDialogDescription>
+                    {error ? <p className="text-sm font-medium text-red-600">{error}</p> : null}
                 </AlertDialogHeader>
                 <AlertDialogFooter>
-                    <AlertDialogCancel>Cancel</AlertDialogCancel>
-                    <AlertDialogAction onClick={handleConfirm}>Delete</AlertDialogAction>
+                    <AlertDialogCancel disabled={isDeleting}>Cancel</AlertDialogCancel>
+                    <AlertDialogAction onClick={handleConfirm} disabled={isDeleting}>
+                        {isDeleting ? 'Deleting...' : 'Delete'}
+                    </AlertDialogAction>
                 </AlertDialogFooter>
             </AlertDialogContent>
         </AlertDialog>

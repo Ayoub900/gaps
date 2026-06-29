@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="300" viewBox="0 0 720 300" role="img" aria-labelledby="title desc">
+  <title id="title">UKRLP badge</title>
+  <desc id="desc">UK Register of Learning Providers badge with Union Jack motif.</desc>
+  <rect width="720" height="300" rx="24" fill="#ffffff"/>
+  <rect x="16" y="16" width="688" height="268" rx="18" fill="none" stroke="#050c45" stroke-width="6"/>
+  <g transform="translate(452 66)">
+    <clipPath id="flagClip">
+      <rect width="174" height="104" rx="4"/>
+    </clipPath>
+    <g clip-path="url(#flagClip)">
+      <rect width="174" height="104" fill="#012169"/>
+      <path d="M0 0 174 104M174 0 0 104" stroke="#fff" stroke-width="24"/>
+      <path d="M0 0 174 104M174 0 0 104" stroke="#c8102e" stroke-width="12"/>
+      <path d="M87 0v104M0 52h174" stroke="#fff" stroke-width="38"/>
+      <path d="M87 0v104M0 52h174" stroke="#c8102e" stroke-width="22"/>
+    </g>
+  </g>
+  <text x="76" y="126" fill="#050c45" font-family="Arial, Helvetica, sans-serif" font-size="72" font-weight="800" letter-spacing="5">UKRLP</text>
+  <text x="80" y="174" fill="#374151" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700">UK Register</text>
+  <text x="80" y="212" fill="#374151" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700">of Learning Providers</text>
+  <text x="452" y="208" fill="#050c45" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700">UKPRN</text>
+  <text x="452" y="244" fill="#e49400" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="800">10100464</text>
+</svg>

@@ -1,4 +1,6 @@
 import React from 'react'
+import Image from 'next/image'
+import Link from 'next/link'
 
 export default function AboutPage() {
     return (
@@ -28,6 +30,29 @@ export default function AboutPage() {
                         <li>Undergraduate Degree-Level Education</li>
                         <li>Postgraduate-Level Qualifications</li>
                     </ul>
+                </section>
+
+                <section className="grid gap-6 rounded-lg border border-[#050c45]/15 bg-white p-6 shadow-sm md:grid-cols-[280px_1fr] md:items-center">
+                    <Image
+                        src="/ukrlp-badge.svg"
+                        width={360}
+                        height={150}
+                        alt="UKRLP UK Register of Learning Providers badge"
+                        className="w-full max-w-[280px]"
+                    />
+                    <div className="space-y-3">
+                        <h2 className="text-2xl font-semibold text-[#050c45]">Registration & Verification</h2>
+                        <p className="text-lg leading-relaxed">
+                            GAPS diploma documents include UK Register of Learning Providers reference details, company registration information, and a public validation link for certificate checks.
+                        </p>
+                        <Link
+                            href="/documents/gaps-diploma.pdf"
+                            target="_blank"
+                            className="inline-flex items-center justify-center rounded-md bg-[#e49400] px-5 py-3 text-sm font-semibold text-white transition hover:bg-amber-600"
+                        >
+                            View Diploma Sample
+                        </Link>
+                    </div>
                 </section>
 
                 <section className="space-y-4">

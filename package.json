@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "db:seed": "node prisma/seed.js",
+    "db:seed:test": "node prisma/seed.js --env=.env.test.local --env=.env.test --env=.env.local --env=.env"
   },
   "dependencies": {
     "@auth/prisma-adapter": "^2.7.2",

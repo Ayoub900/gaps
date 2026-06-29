@@ -13,10 +13,14 @@ export default function ContactPage({ searchParams }: { searchParams: { success?
             </section>
 
             {/* Main Content */}
-            <section className="min-h-screen px-12 md:px-24 py-16 bg-white">
-                <div className="grid md:grid-cols-2 gap-12 items-start">
+            <section className="min-h-screen bg-[#f8fafc] px-4 py-16 md:px-24">
+                <div className="mx-auto grid max-w-6xl gap-10 md:grid-cols-[0.85fr_1.15fr] items-start">
                     {/* Contact Info */}
-                    <div className="space-y-8 mt-6">
+                    <div className="space-y-8 rounded-lg border border-[#050c45]/10 bg-white p-6 shadow-sm">
+                        <div>
+                            <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#e49400]">Get in touch</p>
+                            <h2 className="mt-2 text-3xl font-bold text-[#050c45]">We are here to help</h2>
+                        </div>
                         <div>
                             <h2 className="text-2xl font-semibold text-[#050c45] mb-2">Email</h2>
                             <p className="text-gray-700 text-lg">
@@ -37,7 +41,7 @@ export default function ContactPage({ searchParams }: { searchParams: { success?
                     </div>
 
                     {/* Form / Message */}
-                    <div className="w-full">
+                    <div className="w-full rounded-lg border border-[#050c45]/10 bg-white p-6 shadow-sm">
                         {success === "1" ? (
                             <div className="bg-green-100 border border-green-400 text-green-800 rounded-md p-6 text-center text-lg font-medium shadow-sm">
                                 Your application has been sent successfully!

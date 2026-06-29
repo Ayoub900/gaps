@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
+import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
-import FormSubmitButton from '../_components/ui/FormSubmitButton'
 import Form from './Form'
 
 interface PageProps {
@@ -19,12 +20,57 @@ export const metadata: Metadata = {
 
 export default function page({ searchParams: { success, error } }: PageProps) {
     return (
-        <div className="flex flex-col justify-center p-4 md:p-24">
-            <div className="max-w-2xl mx-auto">
-                <h2 className="text-4xl font-bold text-[#050c45] mb-6">Get Certified with GAPS</h2>
-                <p className="mb-8 text-lg text-[#050c45]">
+        <div className="flex flex-col justify-center bg-[#f8fafc] p-4 md:p-24">
+            <div className="max-w-5xl mx-auto">
+                <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#e49400]">Diploma pathways</p>
+                <h2 className="mt-2 text-4xl font-bold text-[#050c45] mb-6">Get Certified with GAPS</h2>
+                <p className="mb-8 text-lg text-gray-700">
                     Boost Your Career with an Internationally Accredited Diploma
                 </p>
+
+                <section className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] items-start mb-12">
+                    <div className="overflow-hidden rounded-lg border border-[#050c45]/10 bg-white shadow-sm">
+                        <div className="relative aspect-[3/4] w-full bg-gray-100">
+                            <Image
+                                src="/documents/gaps-diploma-preview.png"
+                                alt="GAPS international diploma sample preview"
+                                fill
+                                className="object-cover object-top"
+                                sizes="(max-width: 1024px) 100vw, 520px"
+                                priority
+                            />
+                        </div>
+                    </div>
+
+                    <div className="space-y-6">
+                        <div className="rounded-lg border border-[#050c45]/10 bg-white p-6 shadow-sm">
+                            <h3 className="text-2xl font-semibold text-[#050c45] mb-4">Diploma Sample</h3>
+                            <p className="text-gray-700 leading-7 mb-5">
+                                Preview the diploma layout, validation link, serial number format, and official GAPS registration details.
+                            </p>
+                            <Link
+                                href="/documents/gaps-diploma.pdf"
+                                target="_blank"
+                                className="inline-flex items-center justify-center rounded-md bg-[#e49400] px-5 py-3 text-sm font-semibold text-white transition hover:bg-amber-600"
+                            >
+                                Open PDF Sample
+                            </Link>
+                        </div>
+
+                        <div className="rounded-lg border border-[#050c45]/10 bg-white p-6 shadow-sm">
+                            <Image
+                                src="/ukrlp-badge.svg"
+                                width={360}
+                                height={150}
+                                alt="UKRLP UK Register of Learning Providers badge"
+                                className="w-full max-w-[360px]"
+                            />
+                            <p className="mt-4 text-sm leading-6 text-gray-600">
+                                GAPS diploma documents include UK Register of Learning Providers reference details and a public verification link.
+                            </p>
+                        </div>
+                    </div>
+                </section>
 
                 <h2 className="text-3xl font-semibold text-[#050c45] mb-4">Why Choose a GAPS Diploma?</h2>
                 <ul className="list-disc list-inside text-lg space-y-2 text-[#050c45]">

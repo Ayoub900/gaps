@@ -18,7 +18,6 @@ import { Input } from "@/components/ui/input"
 import { Button } from "../../components/ui/button"
 import { useState } from "react"
 import { useSearchParams, useRouter } from "next/navigation"
-import { revalidatePath } from "next/cache";
 
 const FormSchema = z.object({
     email: z.string().email({
@@ -83,7 +82,7 @@ export default function LoginForm() {
 
     return (
         <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="w-full space-y-3">
+            <form method="post" onSubmit={form.handleSubmit(onSubmit)} className="w-full space-y-3">
                 <FormField
                     control={form.control}
                     name="email"
@@ -133,7 +132,7 @@ export default function LoginForm() {
                     </div>
                 )}
 
-                <Button disabled={pending} className="text-md bg-[#e49400] hover:bg-amber-600 text-white">
+                <Button type="submit" disabled={pending} className="text-md bg-[#e49400] hover:bg-amber-600 text-white">
                     Login
                 </Button>
             </form>

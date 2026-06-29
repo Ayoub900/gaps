@@ -30,7 +30,7 @@ export default function PhoneNavbar() {
             {/* Mobile Menu */}
             <nav
                 id="mobile-menu"
-                className={`fixed inset-0 bg-white z-50 flex flex-col justify-center items-center gap-6 p-6 transition-transform duration-300 ease-in-out ${isActive ? "translate-x-0" : "translate-x-full"
+                className={`fixed inset-0 bg-white z-50 flex flex-col justify-center items-center gap-6 p-6 transition-transform duration-300 ease-in-out ${isActive ? "translate-x-0" : "-translate-x-full"
                     }`}
             >
                 <button

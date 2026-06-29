@@ -47,6 +47,35 @@ model post {
   @@map("posts")
 }
 
+model event {
+  id              String   @id @default(auto()) @map("_id") @db.ObjectId
+  title           String
+  description     String?
+  fullDescription String?
+  location        String?
+  date            DateTime?
+  imageUrl        String?
+  videoUrl        String?
+  publish         Boolean  @default(true)
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@map("events")
+}
+
+model partner {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  name      String
+  website   String?
+  imageUrl  String
+  sortOrder Int      @default(0)
+  publish   Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("partners")
+}
+
 model application {
   id        String   @id @default(auto()) @map("_id") @db.ObjectId
   name      String

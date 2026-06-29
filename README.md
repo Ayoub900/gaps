@@ -1,5 +1,23 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## Test database seed
+
+Seed the test database with repeatable fixture data:
+
+```bash
+npm run db:seed:test
+```
+
+The seed uses `DATABASE_URL` from `.env.test.local`, `.env.test`, `.env.local`, or `.env` in that order. It upserts published and draft posts, homepage events, partner logos, verification IDs, paginated applications, diploma requests, LP forms in every status, and test users.
+
+For safety, the script refuses to write to a database URL that does not look like a test, dev, local, staging, or sandbox database. After confirming the target is safe, override that guard with:
+
+```bash
+npm run db:seed:test -- --allow-non-test-db
+```
+
+Test user password: `TestPassword123!`
+
 ## Getting Started
 
 First, run the development server:
