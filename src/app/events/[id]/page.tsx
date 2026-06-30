@@ -51,7 +51,7 @@ export default async function EventPage({ params: { id } }: EventPageProps) {
     return (
         <main className="min-h-screen bg-white">
             <section className="mx-auto max-w-5xl px-4 py-12 md:px-8">
-                <Link href="/#events" className="text-sm font-semibold text-[#050c45] hover:text-[#e49400]">
+                <Link href="/events" className="text-sm font-semibold text-[#050c45] hover:text-[#e49400]">
                     Back to events
                 </Link>
 

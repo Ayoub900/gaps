@@ -22,13 +22,14 @@ function LogoTitle() {
 export default function Navbar() {
     return (
         <>
-            <nav className="sticky top-0 z-40 hidden border-b border-gray-100 bg-white/95 px-4 shadow-sm backdrop-blur md:block">
+            <nav className="sticky top-0 z-40 hidden border-b border-gray-100 bg-white/95 px-4 shadow-sm backdrop-blur lg:block">
                 <div className="mx-auto flex max-w-7xl items-center justify-between">
                     <LogoTitle />
                     <div className="flex items-center gap-1 text-sm font-semibold text-[#050c45]">
                         <Link href="/" className="px-3 py-5 hover:text-[#e49400] transition duration-300">Home</Link>
                         <Link href="/posts/686a566d0cb9966c44354e0b" className="px-3 py-5 hover:text-[#e49400] transition duration-300">Certification</Link>
                         <Link href="/international-diploma" className="px-3 py-5 hover:text-[#e49400] transition duration-300">International Diploma</Link>
+                        <Link href="/events" className="px-3 py-5 hover:text-[#e49400] transition duration-300">Events</Link>
                         <Link href="/verification" className="px-3 py-5 hover:text-[#e49400] transition duration-300">Verification</Link>
                         <Link href="/about" className="px-3 py-5 hover:text-[#e49400] transition duration-300">About Us</Link>
                         <Link href="/contact" className="px-3 py-5 hover:text-[#e49400] transition duration-300">Contact Us</Link>
@@ -36,7 +37,7 @@ export default function Navbar() {
                 </div>
             </nav>
 
-            <nav className="sticky top-0 z-40 flex md:hidden justify-between items-center border-b border-gray-100 bg-white/95 py-2 px-4 shadow-sm backdrop-blur">
+            <nav className="sticky top-0 z-40 flex lg:hidden justify-between items-center border-b border-gray-100 bg-white/95 py-2 px-4 shadow-sm backdrop-blur">
                 <LogoTitle />
                 <PhoneNavbar />
             </nav>

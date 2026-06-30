@@ -10,6 +10,7 @@ const navLinks = [
     { href: "/", label: "Home" },
     { href: "/posts/686a566d0cb9966c44354e0b", label: "Certification" },
     { href: "/international-diploma", label: "International Diploma" },
+    { href: "/events", label: "Events" },
     { href: "/verification", label: "Verification" },
     { href: "/about", label: "About Us" },
     { href: "/contact", label: "Contact Us" },

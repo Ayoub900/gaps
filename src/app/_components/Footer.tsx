@@ -34,6 +34,7 @@ export default function Footer() {
                     <Link href="/about" className="text-white/70 hover:text-[#e49400] transition">About Us</Link>
                     <Link href="/posts/686a566d0cb9966c44354e0b" className="text-white/70 hover:text-[#e49400] transition">Certification</Link>
                     <Link href="/international-diploma" className="text-white/70 hover:text-[#e49400] transition">International Diploma</Link>
+                    <Link href="/events" className="text-white/70 hover:text-[#e49400] transition">Events</Link>
                     <Link href="/verification" className="text-white/70 hover:text-[#e49400] transition">Verification</Link>
                     <Link href="/contact" className="text-white/70 hover:text-[#e49400] transition">Contact Us</Link>
                 </div>
