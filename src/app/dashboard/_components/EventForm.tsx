@@ -23,6 +23,8 @@ interface EventFormProps {
     onClose: () => void
 }
 
+const MAX_IMAGE_SIZE = 5 * 1024 * 1024
+
 function formatDateTimeLocal(value?: Date | string | null) {
     if (!value) return ''
 
@@ -44,10 +46,17 @@ export default function EventForm({ event, isOpen, onClose }: EventFormProps) {
 
     const handleSubmit = async (submitEvent: React.FormEvent<HTMLFormElement>) => {
         submitEvent.preventDefault()
-        setIsLoading(true)
         setError('')
 
         const formData = new FormData(submitEvent.currentTarget)
+
+        const imageValue = formData.get('image')
+        if (imageValue instanceof File && imageValue.size > MAX_IMAGE_SIZE) {
+            setError('Image must be 5MB or smaller.')
+            return
+        }
+
+        setIsLoading(true)
 
         try {
             if (event) {
@@ -79,6 +88,7 @@ export default function EventForm({ event, isOpen, onClose }: EventFormProps) {
                                 src={previewUrl}
                                 alt={previewAlt}
                                 fill
+                                unoptimized={Boolean(event?.imageUrl)}
                                 className="object-cover"
                                 sizes="(max-width: 768px) 92vw, 640px"
                             />

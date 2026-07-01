@@ -40,6 +40,7 @@ export default function EventItem({ event }: { event: EventRecord }) {
                         src={mediaUrl}
                         alt={event.title}
                         fill
+                        unoptimized={mediaUrl.startsWith('/uploads/')}
                         className="object-cover"
                         sizes="(max-width: 768px) 100vw, 33vw"
                     />

@@ -88,6 +88,7 @@ export default async function EventPage({ params: { id } }: EventPageProps) {
                                 alt={event.title}
                                 fill
                                 priority
+                                unoptimized={event.imageUrl.startsWith('/uploads/')}
                                 className="object-cover"
                                 sizes="(max-width: 1024px) 100vw, 1024px"
                             />
