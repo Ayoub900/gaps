@@ -64,6 +64,7 @@ export default function PartnerForm({ partner, isOpen, onClose }: PartnerFormPro
                                 src={partner.imageUrl}
                                 alt={partner.name}
                                 fill
+                                unoptimized={partner.imageUrl.startsWith('/uploads/')}
                                 className="object-contain p-4"
                                 sizes="(max-width: 768px) 92vw, 560px"
                             />

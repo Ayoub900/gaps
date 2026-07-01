@@ -262,6 +262,7 @@ export default async function Home() {
                       src={mediaUrl}
                       alt={event.title}
                       fill
+                      unoptimized={mediaUrl.startsWith('/uploads/')}
                       sizes="(max-width: 768px) 100vw, 33vw"
                     />
                   ) : null}
@@ -317,6 +318,7 @@ export default async function Home() {
                 width={180}
                 height={180}
                 alt={partner.name}
+                unoptimized={partner.imageUrl.startsWith('/uploads/')}
                 className="max-h-28 w-auto object-contain"
               />
             );

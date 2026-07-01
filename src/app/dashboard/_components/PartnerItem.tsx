@@ -29,6 +29,7 @@ export default function PartnerItem({ partner }: { partner: PartnerRecord }) {
                     src={partner.imageUrl}
                     alt={partner.name}
                     fill
+                    unoptimized={partner.imageUrl.startsWith('/uploads/')}
                     className="object-contain p-6"
                     sizes="(max-width: 768px) 100vw, 33vw"
                 />
